@@ -353,6 +353,7 @@
 		92D0C15C2FD66DB0C7A4D70E94EF9D20 /* SoapActionsRenderingControl1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsRenderingControl1.m; path = src/upnp/SoapActionsRenderingControl1.m; sourceTree = "<group>"; };
 		92F86FC9B4ED660355CD55BCE9D612C0 /* LAN1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LAN1Device.h; path = src/api/LAN1Device.h; sourceTree = "<group>"; };
 		93C3924F747BA565BD873BD16128D690 /* LastChangeParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LastChangeParser.h; path = src/api/LastChangeParser.h; sourceTree = "<group>"; };
+		9446B099516B379A7E6BAA98D96B781E /* TVVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVVLCKit.framework; sourceTree = "<group>"; };
 		9508CE2D59C8B9BBC84665CC3EC56E25 /* StateVariable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StateVariable.m; path = src/upnp/StateVariable.m; sourceTree = "<group>"; };
 		961BCE5D7D5B2B78709043857CB76193 /* UPnPDB.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPDB.m; path = src/upnp/UPnPDB.m; sourceTree = "<group>"; };
 		96B0442216F752094FB66138015104B8 /* UPnPManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPManager.m; path = src/upnp/UPnPManager.m; sourceTree = "<group>"; };
@@ -708,6 +709,7 @@
 		63023E8B5E99D3277745C0B759C285E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9446B099516B379A7E6BAA98D96B781E /* TVVLCKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
