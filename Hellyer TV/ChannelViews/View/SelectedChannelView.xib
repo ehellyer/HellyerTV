@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedChannelView" customModule="Hellyer_TV" customModuleProvider="target">
+            <connections>
+                <outlet property="channelView" destination="5nu-g2-DOn" id="JwS-D1-GOZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="182"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nu-g2-DOn" customClass="ChannelView" customModule="Hellyer_TV" customModuleProvider="target">
+                    <rect key="frame" x="25" y="20" width="150" height="142"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5nu-g2-DOn" secondAttribute="bottom" constant="20" id="bS3-ro-8ik"/>
+                <constraint firstAttribute="trailing" secondItem="5nu-g2-DOn" secondAttribute="trailing" constant="25" id="cFT-J8-bVC"/>
+                <constraint firstItem="5nu-g2-DOn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="hsp-4F-sLi"/>
+                <constraint firstItem="5nu-g2-DOn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="p7S-kf-r1P"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,878 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78365FA121D05FF7006CCC1A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78365FA021D05FF7006CCC1A /* UIImageView+Extension.swift */; };
+		784B4B7221C20D5600CB6DB2 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B4B7121C20D5600CB6DB2 /* ChannelListViewController.swift */; };
+		784B4B7521C281CB00CB6DB2 /* ChannelList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784B4B7421C281CB00CB6DB2 /* ChannelList.storyboard */; };
+		784B4B7821C55C0000CB6DB2 /* StoryboardInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B4B7721C55C0000CB6DB2 /* StoryboardInitializer.swift */; };
+		784B4B7B21C55F3A00CB6DB2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B4B7A21C55F3A00CB6DB2 /* UIView+Extension.swift */; };
+		78968FC021DF155D00E86D45 /* SMBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78968FBF21DF155D00E86D45 /* SMBClient.swift */; };
+		78B3DCA721B0C12B00FE3A5A /* UPNPClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3DCA621B0C12B00FE3A5A /* UPNPClientController.swift */; };
+		78B3DCB321B0D93000FE3A5A /* MasterControlProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3DCB221B0D93000FE3A5A /* MasterControlProgram.swift */; };
+		78B7637D21D7D257004816DC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7637C21D7D257004816DC /* UIColor+Extension.swift */; };
+		78B7637F21D83EBA004816DC /* ChannelLogoMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7637E21D83EBA004816DC /* ChannelLogoMap.swift */; };
+		78B7638221D875AE004816DC /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7638121D875AE004816DC /* Clock.swift */; };
+		78B7638621D92406004816DC /* ClockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B7638521D92406004816DC /* ClockView.xib */; };
+		78B7638821D92502004816DC /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7638721D92502004816DC /* ClockView.swift */; };
+		78B7638C21D983A9004816DC /* SelectedChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B7638B21D983A9004816DC /* SelectedChannelView.xib */; };
+		78B7638E21D983B6004816DC /* SelectedChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7638D21D983B6004816DC /* SelectedChannelView.swift */; };
+		78B7639021D99886004816DC /* ChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B7638F21D99886004816DC /* ChannelView.xib */; };
+		78B7639221D99894004816DC /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7639121D99894004816DC /* ChannelView.swift */; };
+		78B7639421D99F43004816DC /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7639321D99F43004816DC /* AppConstants.swift */; };
+		78BB311421C5C9FE00B2207D /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB311321C5C9FE00B2207D /* Channel.swift */; };
+		78BB311721C5CFA500B2207D /* AppUserKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB311621C5CFA500B2207D /* AppUserKeys.swift */; };
+		78BB311D21C5D23B00B2207D /* ChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB311C21C5D23B00B2207D /* ChannelList.swift */; };
+		78E1C18121CC880F004CF112 /* ChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E1C18021CC880F004CF112 /* ChannelCollectionViewCell.swift */; };
+		78FB40AC21A4F63C00AD12C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB40AB21A4F63C00AD12C0 /* AppDelegate.swift */; };
+		78FB40AE21A4F63C00AD12C0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB40AD21A4F63C00AD12C0 /* RootViewController.swift */; };
+		78FB40B121A4F63C00AD12C0 /* Hellyer_TV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78FB40AF21A4F63C00AD12C0 /* Hellyer_TV.xcdatamodeld */; };
+		78FB40B421A4F63C00AD12C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FB40B221A4F63C00AD12C0 /* Main.storyboard */; };
+		78FB40B621A4F63D00AD12C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78FB40B521A4F63D00AD12C0 /* Assets.xcassets */; };
+		78FB437421AE445D00AD12C0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FB436A21AE3CC300AD12C0 /* AudioToolbox.framework */; };
+		78FB437521AE446300AD12C0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FB436821AE3CBC00AD12C0 /* AVFoundation.framework */; };
+		830E8AA023BE40796D5AD4F2 /* Pods_Hellyer_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F321E9DAF4D0D53021DA7EA5 /* Pods_Hellyer_TV.framework */; };
+		EB2E1CDE2512F86F0059CE66 /* ProgramType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2E1CDD2512F86F0059CE66 /* ProgramType.swift */; };
+		EB2E1CE02512FAA80059CE66 /* Factsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2E1CDF2512FAA80059CE66 /* Factsheet.swift */; };
+		EB2E1CE22512FBD60059CE66 /* Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2E1CE12512FBD60059CE66 /* Relative.swift */; };
+		EB2E1CE42512FC420059CE66 /* ChannelSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2E1CE32512FC420059CE66 /* ChannelSchedule.swift */; };
+		EB33D37F25DAE8D7002E99E6 /* BaseDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33D37D25DAE8D7002E99E6 /* BaseDataController.swift */; };
+		EB33D38025DAE8D7002E99E6 /* AttachmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33D37E25DAE8D7002E99E6 /* AttachmentController.swift */; };
+		EB43932324F47A4E002CD9FE /* Hellfire in Frameworks */ = {isa = PBXBuildFile; productRef = EB43932224F47A4E002CD9FE /* Hellfire */; };
+		EB4DCF6F235C89D000525700 /* AppNotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4DCF6E235C89D000525700 /* AppNotificationKeys.swift */; };
+		EB4DCF71235CCB1A00525700 /* Tuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4DCF70235CCB1A00525700 /* Tuner.swift */; };
+		EB73428D250530730058E745 /* TunerServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73428C250530730058E745 /* TunerServer.swift */; };
+		EB73428F251193AC0058E745 /* MD5Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73428E251193AC0058E745 /* MD5Hash.swift */; };
+		EB7342912511941B0058E745 /* RoviAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7342902511941B0058E745 /* RoviAuth.swift */; };
+		EB7342AE2512DEE10058E745 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7342AD2512DEE10058E745 /* String+Extension.swift */; };
+		EBB2DBA32512E5350027AB2D /* AKA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBA22512E5350027AB2D /* AKA.swift */; };
+		EBB2DBA52512E58A0027AB2D /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBA42512E58A0027AB2D /* Award.swift */; };
+		EBB2DBA72512E63F0027AB2D /* MediumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBA62512E63F0027AB2D /* MediumType.swift */; };
+		EBB2DBA92512E74A0027AB2D /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBA82512E74A0027AB2D /* Handle.swift */; };
+		EBB2DBAB2512E9AE0027AB2D /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBAA2512E9AE0027AB2D /* Recipient.swift */; };
+		EBB2DBAD2512EAB40027AB2D /* AwardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBAC2512EAB40027AB2D /* AwardType.swift */; };
+		EBB2DBAF2512EC360027AB2D /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBAE2512EC360027AB2D /* Celebrity.swift */; };
+		EBB2DBB12512ED3A0027AB2D /* CelebrityCredit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBB02512ED3A0027AB2D /* CelebrityCredit.swift */; };
+		EBB2DBB32512ED740027AB2D /* ProgramCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBB22512ED740027AB2D /* ProgramCategory.swift */; };
+		EBB2DBB52512EE4B0027AB2D /* CopyTextSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBB42512EE4B0027AB2D /* CopyTextSource.swift */; };
+		EBB2DBB72512EEBF0027AB2D /* CreditType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBB62512EEBF0027AB2D /* CreditType.swift */; };
+		EBB2DBB92512F2D30027AB2D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBB82512F2D30027AB2D /* Image.swift */; };
+		EBB2DBBB2512F38F0027AB2D /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBBA2512F38F0027AB2D /* ImageFormat.swift */; };
+		EBB2DBBD2512F4FA0027AB2D /* ParentalRatings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2DBBC2512F4FA0027AB2D /* ParentalRatings.swift */; };
+		EBB734DD2358989D00BA57D4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB734DC2358989D00BA57D4 /* SettingsViewController.swift */; };
+		EBB734DF2358993700BA57D4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB734DE2358993700BA57D4 /* Settings.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78968FB221DF0EAE00E86D45 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		78365FA021D05FF7006CCC1A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		784B4B7121C20D5600CB6DB2 /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
+		784B4B7421C281CB00CB6DB2 /* ChannelList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChannelList.storyboard; sourceTree = "<group>"; };
+		784B4B7721C55C0000CB6DB2 /* StoryboardInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializer.swift; sourceTree = "<group>"; };
+		784B4B7A21C55F3A00CB6DB2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		78968FA421DF0CF500E86D45 /* SMBClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SMBClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78968FA621DF0DFC00E86D45 /* SMBClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SMBClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78968FBF21DF155D00E86D45 /* SMBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBClient.swift; sourceTree = "<group>"; };
+		78B3DCA621B0C12B00FE3A5A /* UPNPClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPNPClientController.swift; sourceTree = "<group>"; };
+		78B3DCB221B0D93000FE3A5A /* MasterControlProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterControlProgram.swift; sourceTree = "<group>"; };
+		78B7637C21D7D257004816DC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		78B7637E21D83EBA004816DC /* ChannelLogoMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelLogoMap.swift; sourceTree = "<group>"; };
+		78B7638121D875AE004816DC /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		78B7638521D92406004816DC /* ClockView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockView.xib; sourceTree = "<group>"; };
+		78B7638721D92502004816DC /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		78B7638B21D983A9004816DC /* SelectedChannelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedChannelView.xib; sourceTree = "<group>"; };
+		78B7638D21D983B6004816DC /* SelectedChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedChannelView.swift; sourceTree = "<group>"; };
+		78B7638F21D99886004816DC /* ChannelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelView.xib; sourceTree = "<group>"; };
+		78B7639121D99894004816DC /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
+		78B7639321D99F43004816DC /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		78BB311321C5C9FE00B2207D /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		78BB311621C5CFA500B2207D /* AppUserKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserKeys.swift; sourceTree = "<group>"; };
+		78BB311C21C5D23B00B2207D /* ChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelList.swift; sourceTree = "<group>"; };
+		78E1C18021CC880F004CF112 /* ChannelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCollectionViewCell.swift; sourceTree = "<group>"; };
+		78FB40A821A4F63C00AD12C0 /* Hellyer TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hellyer TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78FB40AB21A4F63C00AD12C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78FB40AD21A4F63C00AD12C0 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		78FB40B021A4F63C00AD12C0 /* Hellyer_TV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hellyer_TV.xcdatamodel; sourceTree = "<group>"; };
+		78FB40B321A4F63C00AD12C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78FB40B521A4F63D00AD12C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78FB40B721A4F63D00AD12C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78FB416121ACDD6700AD12C0 /* Hellyer TV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hellyer TV.entitlements"; sourceTree = "<group>"; };
+		78FB41DC21ACE5C300AD12C0 /* Hellyer_TV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hellyer_TV-Bridging-Header.h"; sourceTree = "<group>"; };
+		78FB436821AE3CBC00AD12C0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		78FB436A21AE3CC300AD12C0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		78FB436C21AE3CCB00AD12C0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		78FB436E21AE3CD700AD12C0 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		78FB437021AE3D4600AD12C0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		78FB437221AE3D5F00AD12C0 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		DCB971BF528040AC51A6DC8C /* Pods-Hellyer TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hellyer TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hellyer TV/Pods-Hellyer TV.release.xcconfig"; sourceTree = "<group>"; };
+		EB2E1CDD2512F86F0059CE66 /* ProgramType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramType.swift; sourceTree = "<group>"; };
+		EB2E1CDF2512FAA80059CE66 /* Factsheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factsheet.swift; sourceTree = "<group>"; };
+		EB2E1CE12512FBD60059CE66 /* Relative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relative.swift; sourceTree = "<group>"; };
+		EB2E1CE32512FC420059CE66 /* ChannelSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSchedule.swift; sourceTree = "<group>"; };
+		EB33D37D25DAE8D7002E99E6 /* BaseDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataController.swift; sourceTree = "<group>"; };
+		EB33D37E25DAE8D7002E99E6 /* AttachmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentController.swift; sourceTree = "<group>"; };
+		EB4DCF6E235C89D000525700 /* AppNotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotificationKeys.swift; sourceTree = "<group>"; };
+		EB4DCF70235CCB1A00525700 /* Tuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuner.swift; sourceTree = "<group>"; };
+		EB73428C250530730058E745 /* TunerServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerServer.swift; sourceTree = "<group>"; };
+		EB73428E251193AC0058E745 /* MD5Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5Hash.swift; sourceTree = "<group>"; };
+		EB7342902511941B0058E745 /* RoviAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoviAuth.swift; sourceTree = "<group>"; };
+		EB7342AD2512DEE10058E745 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		EBB2DBA22512E5350027AB2D /* AKA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKA.swift; sourceTree = "<group>"; };
+		EBB2DBA42512E58A0027AB2D /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		EBB2DBA62512E63F0027AB2D /* MediumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumType.swift; sourceTree = "<group>"; };
+		EBB2DBA82512E74A0027AB2D /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
+		EBB2DBAA2512E9AE0027AB2D /* Recipient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
+		EBB2DBAC2512EAB40027AB2D /* AwardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardType.swift; sourceTree = "<group>"; };
+		EBB2DBAE2512EC360027AB2D /* Celebrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
+		EBB2DBB02512ED3A0027AB2D /* CelebrityCredit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityCredit.swift; sourceTree = "<group>"; };
+		EBB2DBB22512ED740027AB2D /* ProgramCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCategory.swift; sourceTree = "<group>"; };
+		EBB2DBB42512EE4B0027AB2D /* CopyTextSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyTextSource.swift; sourceTree = "<group>"; };
+		EBB2DBB62512EEBF0027AB2D /* CreditType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditType.swift; sourceTree = "<group>"; };
+		EBB2DBB82512F2D30027AB2D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		EBB2DBBA2512F38F0027AB2D /* ImageFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFormat.swift; sourceTree = "<group>"; };
+		EBB2DBBC2512F4FA0027AB2D /* ParentalRatings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentalRatings.swift; sourceTree = "<group>"; };
+		EBB734DC2358989D00BA57D4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EBB734DE2358993700BA57D4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		ED3D64C73C927B052E0CE122 /* Pods-Hellyer TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hellyer TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hellyer TV/Pods-Hellyer TV.debug.xcconfig"; sourceTree = "<group>"; };
+		F321E9DAF4D0D53021DA7EA5 /* Pods_Hellyer_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hellyer_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78FB40A521A4F63C00AD12C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FB437521AE446300AD12C0 /* AVFoundation.framework in Frameworks */,
+				78FB437421AE445D00AD12C0 /* AudioToolbox.framework in Frameworks */,
+				830E8AA023BE40796D5AD4F2 /* Pods_Hellyer_TV.framework in Frameworks */,
+				EB43932324F47A4E002CD9FE /* Hellfire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		784B4B6F21C20D0D00CB6DB2 /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				78E1C17F21CC87B6004CF112 /* View */,
+				78BB311221C5C9ED00B2207D /* Model */,
+				784B4B7321C281AA00CB6DB2 /* Storyboard */,
+				784B4B7021C20D3B00CB6DB2 /* ViewController */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		784B4B7021C20D3B00CB6DB2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				784B4B7121C20D5600CB6DB2 /* ChannelListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		784B4B7321C281AA00CB6DB2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				784B4B7421C281CB00CB6DB2 /* ChannelList.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		784B4B7621C55BEA00CB6DB2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				784B4B7721C55C0000CB6DB2 /* StoryboardInitializer.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		784B4B7921C55F2300CB6DB2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB7342AD2512DEE10058E745 /* String+Extension.swift */,
+				784B4B7A21C55F3A00CB6DB2 /* UIView+Extension.swift */,
+				78365FA021D05FF7006CCC1A /* UIImageView+Extension.swift */,
+				78B7637C21D7D257004816DC /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		78968FBE21DF154800E86D45 /* SMB */ = {
+			isa = PBXGroup;
+			children = (
+				78968FBF21DF155D00E86D45 /* SMBClient.swift */,
+			);
+			path = SMB;
+			sourceTree = "<group>";
+		};
+		78B3DCA421B0C0E600FE3A5A /* TunerScanner */ = {
+			isa = PBXGroup;
+			children = (
+				78B3DCA521B0C0F900FE3A5A /* Controller */,
+			);
+			path = TunerScanner;
+			sourceTree = "<group>";
+		};
+		78B3DCA521B0C0F900FE3A5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78B3DCA621B0C12B00FE3A5A /* UPNPClientController.swift */,
+				EB4DCF70235CCB1A00525700 /* Tuner.swift */,
+				EB73428C250530730058E745 /* TunerServer.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		78B7638021D8759D004816DC /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				78B7638321D923E4004816DC /* Model */,
+				78B7638421D923F4004816DC /* View */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		78B7638321D923E4004816DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78B7638121D875AE004816DC /* Clock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78B7638421D923F4004816DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78B7638521D92406004816DC /* ClockView.xib */,
+				78B7638721D92502004816DC /* ClockView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78B7638921D9837F004816DC /* ChannelViews */ = {
+			isa = PBXGroup;
+			children = (
+				78B7638A21D98399004816DC /* View */,
+			);
+			path = ChannelViews;
+			sourceTree = "<group>";
+		};
+		78B7638A21D98399004816DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78B7638B21D983A9004816DC /* SelectedChannelView.xib */,
+				78B7638D21D983B6004816DC /* SelectedChannelView.swift */,
+				78B7638F21D99886004816DC /* ChannelView.xib */,
+				78B7639121D99894004816DC /* ChannelView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78BB311221C5C9ED00B2207D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78BB311321C5C9FE00B2207D /* Channel.swift */,
+				78BB311C21C5D23B00B2207D /* ChannelList.swift */,
+				78B7637E21D83EBA004816DC /* ChannelLogoMap.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78E1C17F21CC87B6004CF112 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78E1C18021CC880F004CF112 /* ChannelCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78FB409F21A4F63C00AD12C0 = {
+			isa = PBXGroup;
+			children = (
+				78FB40AA21A4F63C00AD12C0 /* Hellyer TV */,
+				78FB40A921A4F63C00AD12C0 /* Products */,
+				F2087426DA4A823DFD330358 /* Pods */,
+				B4A01BBE758BE0746D2773EB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78FB40A921A4F63C00AD12C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78FB40A821A4F63C00AD12C0 /* Hellyer TV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78FB40AA21A4F63C00AD12C0 /* Hellyer TV */ = {
+			isa = PBXGroup;
+			children = (
+				78FB40B521A4F63D00AD12C0 /* Assets.xcassets */,
+				EB4DCF6A235C88A800525700 /* Common */,
+				784B4B6F21C20D0D00CB6DB2 /* ChannelList */,
+				78B7638921D9837F004816DC /* ChannelViews */,
+				78B7638021D8759D004816DC /* Clock */,
+				EB734292251198AC0058E745 /* Guide */,
+				78FB40BD21A4F65000AD12C0 /* Main */,
+				EBB734D72358974100BA57D4 /* Settings */,
+				78FB416121ACDD6700AD12C0 /* Hellyer TV.entitlements */,
+				78FB40AB21A4F63C00AD12C0 /* AppDelegate.swift */,
+				78FB40B721A4F63D00AD12C0 /* Info.plist */,
+				78FB40AF21A4F63C00AD12C0 /* Hellyer_TV.xcdatamodeld */,
+				78FB41DC21ACE5C300AD12C0 /* Hellyer_TV-Bridging-Header.h */,
+			);
+			path = "Hellyer TV";
+			sourceTree = "<group>";
+		};
+		78FB40BD21A4F65000AD12C0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				78FB40B221A4F63C00AD12C0 /* Main.storyboard */,
+				78B3DCB221B0D93000FE3A5A /* MasterControlProgram.swift */,
+				78FB40AD21A4F63C00AD12C0 /* RootViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B4A01BBE758BE0746D2773EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78968FA621DF0DFC00E86D45 /* SMBClient.framework */,
+				78968FA421DF0CF500E86D45 /* SMBClient.framework */,
+				78FB437221AE3D5F00AD12C0 /* libiconv.tbd */,
+				78FB437021AE3D4600AD12C0 /* libc++.tbd */,
+				78FB436E21AE3CD700AD12C0 /* VideoToolbox.framework */,
+				78FB436C21AE3CCB00AD12C0 /* CoreMedia.framework */,
+				78FB436A21AE3CC300AD12C0 /* AudioToolbox.framework */,
+				78FB436821AE3CBC00AD12C0 /* AVFoundation.framework */,
+				F321E9DAF4D0D53021DA7EA5 /* Pods_Hellyer_TV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB33D37B25DAE8D7002E99E6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EB33D37C25DAE8D7002E99E6 /* DataControllers */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EB33D37C25DAE8D7002E99E6 /* DataControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB33D37D25DAE8D7002E99E6 /* BaseDataController.swift */,
+				EB33D37E25DAE8D7002E99E6 /* AttachmentController.swift */,
+			);
+			path = DataControllers;
+			sourceTree = "<group>";
+		};
+		EB4DCF6A235C88A800525700 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EB4DCF6B235C88B800525700 /* AppConstants */,
+				784B4B7921C55F2300CB6DB2 /* Extensions */,
+				EB33D37B25DAE8D7002E99E6 /* Networking */,
+				784B4B7621C55BEA00CB6DB2 /* Protocols */,
+				EBB2DBA12512E5190027AB2D /* RoviDataContracts */,
+				78968FBE21DF154800E86D45 /* SMB */,
+				78B3DCA421B0C0E600FE3A5A /* TunerScanner */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EB4DCF6B235C88B800525700 /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				78BB311621C5CFA500B2207D /* AppUserKeys.swift */,
+				78B7639321D99F43004816DC /* AppConstants.swift */,
+				EB4DCF6E235C89D000525700 /* AppNotificationKeys.swift */,
+			);
+			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		EB734292251198AC0058E745 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				EB73428E251193AC0058E745 /* MD5Hash.swift */,
+				EB7342902511941B0058E745 /* RoviAuth.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		EBB2DBA12512E5190027AB2D /* RoviDataContracts */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2DBA22512E5350027AB2D /* AKA.swift */,
+				EBB2DBA42512E58A0027AB2D /* Award.swift */,
+				EBB2DBAC2512EAB40027AB2D /* AwardType.swift */,
+				EBB2DBAE2512EC360027AB2D /* Celebrity.swift */,
+				EBB2DBB02512ED3A0027AB2D /* CelebrityCredit.swift */,
+				EB2E1CE32512FC420059CE66 /* ChannelSchedule.swift */,
+				EBB2DBB42512EE4B0027AB2D /* CopyTextSource.swift */,
+				EBB2DBB62512EEBF0027AB2D /* CreditType.swift */,
+				EB2E1CDF2512FAA80059CE66 /* Factsheet.swift */,
+				EBB2DBA82512E74A0027AB2D /* Handle.swift */,
+				EBB2DBB82512F2D30027AB2D /* Image.swift */,
+				EBB2DBBA2512F38F0027AB2D /* ImageFormat.swift */,
+				EBB2DBA62512E63F0027AB2D /* MediumType.swift */,
+				EBB2DBBC2512F4FA0027AB2D /* ParentalRatings.swift */,
+				EBB2DBB22512ED740027AB2D /* ProgramCategory.swift */,
+				EB2E1CDD2512F86F0059CE66 /* ProgramType.swift */,
+				EBB2DBAA2512E9AE0027AB2D /* Recipient.swift */,
+				EB2E1CE12512FBD60059CE66 /* Relative.swift */,
+			);
+			path = RoviDataContracts;
+			sourceTree = "<group>";
+		};
+		EBB734D72358974100BA57D4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EBB734D92358975900BA57D4 /* Storyboard */,
+				EBB734D82358975300BA57D4 /* ViewController */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		EBB734D82358975300BA57D4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EBB734DC2358989D00BA57D4 /* SettingsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EBB734D92358975900BA57D4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EBB734DE2358993700BA57D4 /* Settings.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F2087426DA4A823DFD330358 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED3D64C73C927B052E0CE122 /* Pods-Hellyer TV.debug.xcconfig */,
+				DCB971BF528040AC51A6DC8C /* Pods-Hellyer TV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78FB40A721A4F63C00AD12C0 /* Hellyer TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78FB40BA21A4F63D00AD12C0 /* Build configuration list for PBXNativeTarget "Hellyer TV" */;
+			buildPhases = (
+				F2DF3EF8A35ADCF9B267203A /* [CP] Check Pods Manifest.lock */,
+				78FB40A421A4F63C00AD12C0 /* Sources */,
+				78FB40A521A4F63C00AD12C0 /* Frameworks */,
+				78FB40A621A4F63C00AD12C0 /* Resources */,
+				78968FB221DF0EAE00E86D45 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hellyer TV";
+			packageProductDependencies = (
+				EB43932224F47A4E002CD9FE /* Hellfire */,
+			);
+			productName = "Hellyer TV";
+			productReference = 78FB40A821A4F63C00AD12C0 /* Hellyer TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78FB40A021A4F63C00AD12C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Hellyer Multimedia";
+				TargetAttributes = {
+					78FB40A721A4F63C00AD12C0 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.appletvos = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 78FB40A321A4F63C00AD12C0 /* Build configuration list for PBXProject "Hellyer TV" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78FB409F21A4F63C00AD12C0;
+			packageReferences = (
+				EB43932124F47A4E002CD9FE /* XCRemoteSwiftPackageReference "HellfireSwiftPackage" */,
+			);
+			productRefGroup = 78FB40A921A4F63C00AD12C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78FB40A721A4F63C00AD12C0 /* Hellyer TV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78FB40A621A4F63C00AD12C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FB40B621A4F63D00AD12C0 /* Assets.xcassets in Resources */,
+				78FB40B421A4F63C00AD12C0 /* Main.storyboard in Resources */,
+				784B4B7521C281CB00CB6DB2 /* ChannelList.storyboard in Resources */,
+				EBB734DF2358993700BA57D4 /* Settings.storyboard in Resources */,
+				78B7638C21D983A9004816DC /* SelectedChannelView.xib in Resources */,
+				78B7638621D92406004816DC /* ClockView.xib in Resources */,
+				78B7639021D99886004816DC /* ChannelView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F2DF3EF8A35ADCF9B267203A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hellyer TV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78FB40A421A4F63C00AD12C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784B4B7821C55C0000CB6DB2 /* StoryboardInitializer.swift in Sources */,
+				78B7638821D92502004816DC /* ClockView.swift in Sources */,
+				78B3DCB321B0D93000FE3A5A /* MasterControlProgram.swift in Sources */,
+				78B7637D21D7D257004816DC /* UIColor+Extension.swift in Sources */,
+				78B7637F21D83EBA004816DC /* ChannelLogoMap.swift in Sources */,
+				78B7638E21D983B6004816DC /* SelectedChannelView.swift in Sources */,
+				78BB311421C5C9FE00B2207D /* Channel.swift in Sources */,
+				EBB2DBBB2512F38F0027AB2D /* ImageFormat.swift in Sources */,
+				EB7342912511941B0058E745 /* RoviAuth.swift in Sources */,
+				EBB2DBA32512E5350027AB2D /* AKA.swift in Sources */,
+				78BB311D21C5D23B00B2207D /* ChannelList.swift in Sources */,
+				EB2E1CE02512FAA80059CE66 /* Factsheet.swift in Sources */,
+				EB2E1CE22512FBD60059CE66 /* Relative.swift in Sources */,
+				78968FC021DF155D00E86D45 /* SMBClient.swift in Sources */,
+				78B7639421D99F43004816DC /* AppConstants.swift in Sources */,
+				78FB40AE21A4F63C00AD12C0 /* RootViewController.swift in Sources */,
+				78B7639221D99894004816DC /* ChannelView.swift in Sources */,
+				78FB40AC21A4F63C00AD12C0 /* AppDelegate.swift in Sources */,
+				EB33D38025DAE8D7002E99E6 /* AttachmentController.swift in Sources */,
+				EBB2DBB12512ED3A0027AB2D /* CelebrityCredit.swift in Sources */,
+				78E1C18121CC880F004CF112 /* ChannelCollectionViewCell.swift in Sources */,
+				EB4DCF6F235C89D000525700 /* AppNotificationKeys.swift in Sources */,
+				EB2E1CDE2512F86F0059CE66 /* ProgramType.swift in Sources */,
+				EB33D37F25DAE8D7002E99E6 /* BaseDataController.swift in Sources */,
+				EBB2DBA52512E58A0027AB2D /* Award.swift in Sources */,
+				78B3DCA721B0C12B00FE3A5A /* UPNPClientController.swift in Sources */,
+				EB2E1CE42512FC420059CE66 /* ChannelSchedule.swift in Sources */,
+				EBB2DBB32512ED740027AB2D /* ProgramCategory.swift in Sources */,
+				EB7342AE2512DEE10058E745 /* String+Extension.swift in Sources */,
+				EB73428F251193AC0058E745 /* MD5Hash.swift in Sources */,
+				EB4DCF71235CCB1A00525700 /* Tuner.swift in Sources */,
+				78BB311721C5CFA500B2207D /* AppUserKeys.swift in Sources */,
+				EBB2DBAB2512E9AE0027AB2D /* Recipient.swift in Sources */,
+				EBB2DBB92512F2D30027AB2D /* Image.swift in Sources */,
+				784B4B7221C20D5600CB6DB2 /* ChannelListViewController.swift in Sources */,
+				EBB2DBAF2512EC360027AB2D /* Celebrity.swift in Sources */,
+				EBB2DBAD2512EAB40027AB2D /* AwardType.swift in Sources */,
+				EBB2DBBD2512F4FA0027AB2D /* ParentalRatings.swift in Sources */,
+				EBB734DD2358989D00BA57D4 /* SettingsViewController.swift in Sources */,
+				78B7638221D875AE004816DC /* Clock.swift in Sources */,
+				EBB2DBA72512E63F0027AB2D /* MediumType.swift in Sources */,
+				EBB2DBB52512EE4B0027AB2D /* CopyTextSource.swift in Sources */,
+				EBB2DBB72512EEBF0027AB2D /* CreditType.swift in Sources */,
+				EBB2DBA92512E74A0027AB2D /* Handle.swift in Sources */,
+				784B4B7B21C55F3A00CB6DB2 /* UIView+Extension.swift in Sources */,
+				78365FA121D05FF7006CCC1A /* UIImageView+Extension.swift in Sources */,
+				78FB40B121A4F63C00AD12C0 /* Hellyer_TV.xcdatamodeld in Sources */,
+				EB73428D250530730058E745 /* TunerServer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78FB40B221A4F63C00AD12C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78FB40B321A4F63C00AD12C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78FB40B821A4F63D00AD12C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Debug;
+		};
+		78FB40B921A4F63D00AD12C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78FB40BB21A4F63D00AD12C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED3D64C73C927B052E0CE122 /* Pods-Hellyer TV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
+				CODE_SIGN_ENTITLEMENTS = "Hellyer TV/Hellyer TV.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84CS8BE5EQ;
+				INFOPLIST_FILE = "Hellyer TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hellyermultimedia.Hellyer-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hellyer TV/Hellyer_TV-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		78FB40BC21A4F63D00AD12C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCB971BF528040AC51A6DC8C /* Pods-Hellyer TV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
+				CODE_SIGN_ENTITLEMENTS = "Hellyer TV/Hellyer TV.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84CS8BE5EQ;
+				INFOPLIST_FILE = "Hellyer TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hellyermultimedia.Hellyer-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hellyer TV/Hellyer_TV-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78FB40A321A4F63C00AD12C0 /* Build configuration list for PBXProject "Hellyer TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78FB40B821A4F63D00AD12C0 /* Debug */,
+				78FB40B921A4F63D00AD12C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78FB40BA21A4F63D00AD12C0 /* Build configuration list for PBXNativeTarget "Hellyer TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78FB40BB21A4F63D00AD12C0 /* Debug */,
+				78FB40BC21A4F63D00AD12C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB43932124F47A4E002CD9FE /* XCRemoteSwiftPackageReference "HellfireSwiftPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ehellyer/HellfireSwiftPackage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB43932224F47A4E002CD9FE /* Hellfire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB43932124F47A4E002CD9FE /* XCRemoteSwiftPackageReference "HellfireSwiftPackage" */;
+			productName = Hellfire;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		78FB40AF21A4F63C00AD12C0 /* Hellyer_TV.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				78FB40B021A4F63C00AD12C0 /* Hellyer_TV.xcdatamodel */,
+			);
+			currentVersion = 78FB40B021A4F63C00AD12C0 /* Hellyer_TV.xcdatamodel */;
+			path = Hellyer_TV.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 78FB40A021A4F63C00AD12C0 /* Project object */;
+}

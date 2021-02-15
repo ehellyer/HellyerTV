@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Hellfire",
+        "repositoryURL": "https://github.com/ehellyer/HellfireSwiftPackage.git",
+        "state": {
+          "branch": null,
+          "revision": "c332a87db016a3341050914439a5d59a2c7e60e1",
+          "version": "0.0.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

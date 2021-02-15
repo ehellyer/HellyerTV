@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Ug-s5-mJb">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Channel List View Controller-->
+        <scene sceneID="GaC-wU-1HX">
+            <objects>
+                <viewController id="7Ug-s5-mJb" customClass="ChannelListViewController" customModule="Hellyer_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rcd-Ci-c9i"/>
+                        <viewControllerLayoutGuide type="bottom" id="h7G-hp-u8w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DBT-6g-Rni">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ohn-tM-dZg">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="1080"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="a2R-MZ-3hf"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="0.0" id="9wY-xg-4nf">
+                                    <size key="itemSize" width="200" height="152"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChannelCellIdentifier" id="MNH-dp-Qat" customClass="ChannelCollectionViewCell" customModule="Hellyer_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="152"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="152"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0x-Pr-WFe" customClass="ChannelView" customModule="Hellyer_TV" customModuleProvider="target">
+                                                    <rect key="frame" x="25" y="5" width="150" height="142"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fIB-WX-gZK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="152"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="f0x-Pr-WFe" firstAttribute="top" secondItem="MNH-dp-Qat" secondAttribute="top" constant="5" id="4sn-VC-bgj"/>
+                                            <constraint firstAttribute="bottom" secondItem="f0x-Pr-WFe" secondAttribute="bottom" constant="5" id="8Cz-M8-ABR"/>
+                                            <constraint firstAttribute="bottom" secondItem="fIB-WX-gZK" secondAttribute="bottom" id="Usa-R6-pXd"/>
+                                            <constraint firstItem="fIB-WX-gZK" firstAttribute="top" secondItem="MNH-dp-Qat" secondAttribute="top" id="Xod-6P-UoN"/>
+                                            <constraint firstAttribute="trailing" secondItem="fIB-WX-gZK" secondAttribute="trailing" id="ZdG-8f-BjV"/>
+                                            <constraint firstAttribute="trailing" secondItem="f0x-Pr-WFe" secondAttribute="trailing" constant="25" id="bB9-jA-vm6"/>
+                                            <constraint firstItem="fIB-WX-gZK" firstAttribute="leading" secondItem="MNH-dp-Qat" secondAttribute="leading" id="fFc-NY-mbO"/>
+                                            <constraint firstItem="f0x-Pr-WFe" firstAttribute="leading" secondItem="MNH-dp-Qat" secondAttribute="leading" constant="25" id="tRI-VK-gHz"/>
+                                        </constraints>
+                                        <size key="customSize" width="200" height="152"/>
+                                        <connections>
+                                            <outlet property="channelView" destination="f0x-Pr-WFe" id="RQa-hD-VDg"/>
+                                            <outlet property="focusImageView" destination="fIB-WX-gZK" id="ypL-r6-X2f"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Ug-s5-mJb" id="7dg-Nj-FrO"/>
+                                    <outlet property="delegate" destination="7Ug-s5-mJb" id="B9q-no-gYn"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ohn-tM-dZg" secondAttribute="bottom" id="04M-1j-3x0"/>
+                            <constraint firstItem="ohn-tM-dZg" firstAttribute="top" secondItem="DBT-6g-Rni" secondAttribute="top" id="CXC-3r-pp6"/>
+                            <constraint firstItem="ohn-tM-dZg" firstAttribute="leading" secondItem="DBT-6g-Rni" secondAttribute="leading" id="WbS-bP-LI0"/>
+                            <constraint firstAttribute="trailing" secondItem="ohn-tM-dZg" secondAttribute="trailing" id="mkG-pR-f7T"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="1080"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ohn-tM-dZg" id="qAR-XR-nYR"/>
+                        <outlet property="widthConstraint" destination="a2R-MZ-3hf" id="e32-c0-nzC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao6-4L-unS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2998" y="-57"/>
+        </scene>
+    </scenes>
+</document>
