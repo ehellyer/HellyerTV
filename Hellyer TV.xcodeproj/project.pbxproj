@@ -386,7 +386,7 @@
 				78FB40A521A4F63C00AD12C0 /* Frameworks */,
 				78FB40A621A4F63C00AD12C0 /* Resources */,
 				78968FB221DF0EAE00E86D45 /* Embed Frameworks */,
-				929538A039FBB68A9CEC0FEE /* [CP] Embed Pods Frameworks */,
+				599FF2B7E5AFA911AEA99014 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -436,7 +436,7 @@
 			);
 			mainGroup = 78FB409F21A4F63C00AD12C0;
 			packageReferences = (
-				EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage" */,
+				EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage.git" */,
 			);
 			productRefGroup = 78FB40A921A4F63C00AD12C0 /* Products */;
 			projectDirPath = "";
@@ -465,7 +465,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		929538A039FBB68A9CEC0FEE /* [CP] Embed Pods Frameworks */ = {
+		599FF2B7E5AFA911AEA99014 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -745,7 +745,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage" */ = {
+		EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ehellyer/HellfireSwiftPackage.git";
 			requirement = {
@@ -758,7 +758,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		EB2029302B197F8A00F4F8DA /* Hellfire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage" */;
+			package = EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage.git" */;
 			productName = Hellfire;
 		};
 /* End XCSwiftPackageProductDependency section */
