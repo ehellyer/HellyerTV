@@ -1,89 +1,63 @@
-Pods/TVVLCKit/TVVLCKit.xcframework/Info.plist
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/BCSymbolMaps/46E832B2-E2E4-3CF4-9687-E9A56338940B.bcsymbolmap
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/dSYMs/TVVLCKit.framework.dSYM/Contents/Info.plist
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/dSYMs/TVVLCKit.framework.dSYM/Contents/Resources/DWARF/TVVLCKit
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Info.plist
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/TVVLCKit
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/TVVLCKit.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCAdjustFilter.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCAudio.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCConsoleLogger.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCDialogProvider.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCFileLogger.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCFilter.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCLibrary.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCLogging.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCLogMessageFormatter.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCMedia.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCMediaDiscoverer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCMediaList.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCMediaListPlayer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCMediaMetaData.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCMediaPlayer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCMediaThumbnailer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/VLCTime.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/deprecated.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_dialog.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_events.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_media.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_media_discoverer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_media_library.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_media_list.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_media_list_player.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_media_player.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_picture.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_renderer_discoverer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_version.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/libvlc_vlm.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Headers/vlc/vlc.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/Modules/module.modulemap
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/PrivateHeaders/VLCCustomDialogProvider.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/PrivateHeaders/VLCEmbeddedDialogProvider.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/PrivateHeaders/VLCHelperCode.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/PrivateHeaders/VLCiOSLegacyDialogProvider.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64/TVVLCKit.framework/PrivateHeaders/VLCLibVLCBridging.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/dSYMs/TVVLCKit.framework.dSYM/Contents/Info.plist
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/dSYMs/TVVLCKit.framework.dSYM/Contents/Resources/DWARF/TVVLCKit
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Info.plist
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/TVVLCKit
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/_CodeSignature/CodeResources
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/TVVLCKit.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCAdjustFilter.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCAudio.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCConsoleLogger.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCDialogProvider.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCFileLogger.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCFilter.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCLibrary.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCLogging.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCLogMessageFormatter.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCMedia.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCMediaDiscoverer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCMediaList.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCMediaListPlayer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCMediaMetaData.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCMediaPlayer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCMediaThumbnailer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/VLCTime.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/deprecated.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_dialog.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_events.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_media.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_media_discoverer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_media_library.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_media_list.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_media_list_player.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_media_player.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_picture.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_renderer_discoverer.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_version.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/libvlc_vlm.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Headers/vlc/vlc.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/Modules/module.modulemap
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/PrivateHeaders/VLCCustomDialogProvider.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/PrivateHeaders/VLCEmbeddedDialogProvider.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/PrivateHeaders/VLCHelperCode.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/PrivateHeaders/VLCiOSLegacyDialogProvider.h
-Pods/TVVLCKit/TVVLCKit.xcframework/tvos-arm64_x86_64-simulator/TVVLCKit.framework/PrivateHeaders/VLCLibVLCBridging.h
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcuserstate
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Code Signing
+#
+# If you wish to share your code signing files, it is recommended to add them to gitignore
+#
+# *.cert
+# *.mobileprovision
+
+# Ignore the TVVLCKit pod directory.
+Pods/TVVLCKit/*
