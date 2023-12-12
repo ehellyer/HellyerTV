@@ -8,7 +8,6 @@
 
 import Foundation
 import TVUIKit
-import Hellfire
 
 class SelectedChannelView: UIView {
     

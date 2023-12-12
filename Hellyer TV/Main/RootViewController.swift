@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Hellfire
+import TVVLCKit
 
 extension VLCMediaPlayer {
     public static let shared: VLCMediaPlayer = {
@@ -17,7 +17,7 @@ extension VLCMediaPlayer {
 }
 
 class RootViewController: UIViewController {
-
+    
     //MARK: - UIViewController overrides
     deinit {
         debugPrint("\(String(describing: type(of: self))) has deallocated. - \(#function)")
@@ -25,51 +25,51 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.videoView.backgroundColor = UIColor.darkGray
+        self.view.backgroundColor = UIColor.lightGray
+        self.videoView.backgroundColor = UIColor.clear
         self.setupMediaPlayer()
         self.addNotificationObserver()
         self.addGestureRecognizers()
         self.clockView.isHidden = true
         self.selectedChannelView.isHidden = true
     }
-
-    //MARK: - UI Interaction handlers
     
+    //MARK: - UI Interaction handlers
     @objc func stopPlayer() {
         if self.mediaPlayer.isPlaying {
             self.mediaPlayer.stop()
         }
     }
-
+    
     @objc func swipeGesture(sender: UISwipeGestureRecognizer) {
         self.disableGestures()
         
         switch sender.direction {
-        case .down:
-            SettingsViewController.present(fromParentViewController: self)
-        case .left:
-            self.autoDismissTimer?.invalidate()
-            ChannelListViewController.present(fromParentViewController: self)
-            self.showClock()
-            self.showChannelConfirm()
-        default:
-            //Other directions not implemented.
-            return
+            case .down, .up:
+                self.autoDismissTimer?.invalidate()
+                ChannelListViewController.present(fromParentViewController: self)
+                self.showClock()
+                self.showChannelConfirm()
+                
+            default:
+                //Other directions not implemented.
+                return
         }
     }
-
+    
     override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         guard let pressType = presses.first?.type else { return }
         switch pressType {
-        case UIPress.PressType.select:
-            self.showClock()
-            self.showChannelConfirm()
-            self.setAutoDismiss()
-        case UIPress.PressType.playPause:
-            self.pauseOrResumePlayer()
-        default:
-            super.pressesBegan(presses, with: event)
-            break
+            case UIPress.PressType.select:
+                ChannelListViewController.present(fromParentViewController: self)
+                self.showClock()
+                self.showChannelConfirm()
+                self.setAutoDismiss()
+            case UIPress.PressType.playPause:
+                self.pauseOrResumePlayer()
+            default:
+                super.pressesBegan(presses, with: event)
+                break
         }
     }
     
@@ -85,32 +85,68 @@ class RootViewController: UIViewController {
     private var tapRecognizer: UITapGestureRecognizer!
     private var isGestureRecognitionEnabled = true
     
-    private var selectedChannel: Channel? {
-        get {
-            return MasterControlProgram.shared.tuner.channels.selectedChannel
-        }
-        set {
-            MasterControlProgram.shared.tuner.channels.selectedChannel = newValue
+    private func initializeTuners() {
+        TunerDiscoveryController.discoverTuners { [weak self] result in
+            switch result {
+                case .success(let tunerDevices):
+                    self?.handleDiscoveredTuners(tunerDevices)
+                case .failure(let failure):
+                    print(failure.localizedDescription)
+            }
         }
     }
-
+    
+    private func handleDiscoveredTuners(_ tunerDevices: [TunerServer]) {
+        // Check we do not have a tuner already discovered that is in this list.
+        guard TunerServer.selectedTuner == nil,
+              let currentTuner = TunerServer.selectedTuner,
+              tunerDevices.contains(currentTuner) == false else {
+            // If there is a current server, that is in the list of discovered devices, lets start playing where we left off.
+            self.playChannel()
+            return
+        }
+        
+        // Get the first tuner as the discovered tuner.
+        guard let tunerServer = tunerDevices.first else {
+            // Not tuners found, abort.
+            print("No tuners found")
+            return
+        }
+        
+        // Go get the channel lineup.
+        TunerDiscoveryController.tunerChannelLineUp(tunerServer) { [weak self] result in
+            switch result {
+                case .success(let channelLineUp):
+                    TunerServer.selectedTuner = tunerServer
+                    TunerServer.channelLineUp = channelLineUp
+                    TunerServer.selectedChannel = channelLineUp.first
+                    self?.playChannel()
+                case .failure(let failure):
+                    print("Error fetching channel lineup for tuner.")
+                    print(failure.localizedDescription)
+            }
+        }
+    }
+    
     private func disableGestures() {
         self.isGestureRecognitionEnabled = false
     }
-
+    
     private func enableGestures() {
         self.isGestureRecognitionEnabled = true
     }
     
-    private func play(channel: Channel) {
-        debugPrint("Changing channel to \(channel.fullName)")
-        let vlcMedia = VLCMedia(url: channel.streamUrl)
+    private func playChannel() {
+        guard let selectedChannel = TunerServer.selectedChannel else { return }
+        
+        debugPrint("Changing channel to \(selectedChannel.guideName)")
+        let vlcMedia = VLCMedia(url: selectedChannel.url)
         self.mediaPlayer.media = vlcMedia
         self.mediaPlayer.play()
     }
     
     private func addGestureRecognizers() {
-        for direction in [UISwipeGestureRecognizer.Direction.down, .left] {
+        for direction in [UISwipeGestureRecognizer.Direction.down, .up] {
             let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(sender:)))
             swipeGesture.direction = direction
             swipeGesture.delegate = self
@@ -118,37 +154,47 @@ class RootViewController: UIViewController {
         }
         
         self.tapRecognizer = UITapGestureRecognizer(target: self, action: nil)
-        self.tapRecognizer.allowedPressTypes = [NSNumber(value: UIPress.PressType.select.rawValue), NSNumber(value: UIPress.PressType.playPause.rawValue)]
+        self.tapRecognizer.allowedPressTypes = [NSNumber(value: UIPress.PressType.select.rawValue),
+                                                NSNumber(value: UIPress.PressType.playPause.rawValue)]
         self.tapRecognizer.delegate = self
         self.view.addGestureRecognizer(self.tapRecognizer)
     }
     
     private func addNotificationObserver() {
-        NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: OperationQueue.main) { [weak self] (notification) in
+        NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification,
+                                               object: nil,
+                                               queue: OperationQueue.main) { [weak self] (notification) in
             self?.stopPlayer()
         }
         
-        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: OperationQueue.main) { [weak self] (notification) in
-            if let lastWatched = MasterControlProgram.shared.tuner.channels.selectedChannel {
-                self?.play(channel: lastWatched)
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification,
+                                               object: nil,
+                                               queue: OperationQueue.main) { [weak self] (notification) in
+            DispatchQueue.main.async {
+                self?.initializeTuners()
             }
         }
         
-        NotificationCenter.default.addObserver(forName: AppNotificationKeys.channelWasSelected, object: nil, queue: OperationQueue.main) { [weak self] (notification) in
-            if let channel = notification.userInfo?["channel"] as? Channel {
-                self?.didSelect(channel: channel)
+        NotificationCenter.default.addObserver(forName: AppNotificationKeys.channelWasSelected,
+                                               object: nil,
+                                               queue: OperationQueue.main) { [weak self] (notification) in
+            DispatchQueue.main.async {
+                if let channel = notification.userInfo?["channel"] as? Channel {
+                    self?.didSelect(channel: channel)
+                }
             }
         }
         
-        NotificationCenter.default.addObserver(forName: AppNotificationKeys.channelListDidDismiss, object: nil, queue: OperationQueue.main) { [weak self] (notification) in
+        NotificationCenter.default.addObserver(forName: AppNotificationKeys.channelListDidDismiss,
+                                               object: nil,
+                                               queue: OperationQueue.main) { [weak self] (notification) in
             self?.channelListDidDismiss()
         }
     }
     
     private func setupMediaPlayer() {
         self.mediaPlayer.drawable = self.videoView
-        self.mediaPlayer.libraryInstance.debugLoggingLevel = 0
-        self.mediaPlayer.libraryInstance.debugLogging = false
+        self.mediaPlayer.libraryInstance.loggers = nil
     }
     
     private func pauseOrResumePlayer() {
@@ -161,9 +207,13 @@ class RootViewController: UIViewController {
     
     private func showClock() {
         if (self.clockView.isHidden == false) { return }
-        self.clock = Clock(delegate: self)
+        self.clockView.isHidden = false
+        self.clockView.alpha = 0
+        UIView.animate(withDuration: 0.2, animations: {
+            self.clockView.alpha = 1
+        })
     }
-
+    
     private func dismissClock() {
         self.clockView.alpha = 1
         UIView.animate(withDuration: 0.2, animations: {
@@ -175,8 +225,8 @@ class RootViewController: UIViewController {
     }
     
     private func showChannelConfirm() {
-        if (self.selectedChannelView.isHidden == false || self.selectedChannel == nil) { return }
-    
+        if (self.selectedChannelView.isHidden == false || TunerServer.selectedChannel == nil) { return }
+        
         if (self.selectedChannelView.isHidden) {
             self.updateSelectedChannelView()
             self.selectedChannelView.isHidden = false
@@ -197,15 +247,15 @@ class RootViewController: UIViewController {
     }
     
     private func updateSelectedChannelView() {
-        let imageName = (ChannelLogoMap.channelLogo[self.selectedChannel?.channelName ?? ""] ?? "") ?? ""
+        let imageName = (ChannelLogoMap.channelLogo[TunerServer.selectedChannel?.guideName ?? ""] ?? "") ?? ""
         self.selectedChannelView.channelView.channelLogoImage = UIImage(named: imageName)
-        self.selectedChannelView.channelView.channelName.text = self.selectedChannel?.channelName
-        self.selectedChannelView.channelView.channelNumber.text = self.selectedChannel?.channelNumber
+        self.selectedChannelView.channelView.channelName.text = TunerServer.selectedChannel?.guideName
+        self.selectedChannelView.channelView.channelNumber.text = TunerServer.selectedChannel?.guideNumber
     }
     
     private func setAutoDismiss() {
         self.autoDismissTimer?.invalidate()
-        self.autoDismissTimer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (timer) in
+        self.autoDismissTimer = Timer.scheduledTimer(withTimeInterval: 6, repeats: false) { (timer) in
             self.dismissClock()
             self.dismissChannelConfirm()
         }
@@ -228,15 +278,13 @@ extension RootViewController: VLCMediaPlayerDelegate {
     func mediaPlayerSnapshot(_ aNotification: Notification) { }
 }
 
-////MARK: - ChannelListViewController selected channel observer functions
+//MARK: - ChannelListViewController selected channel observer functions
 extension RootViewController {
     private func didSelect(channel: Channel) {
-        if (channel.fullName != self.selectedChannel?.fullName ?? "") {
-            self.selectedChannel = channel
+        if (channel != TunerServer.selectedChannel) {
+            TunerServer.selectedChannel = channel
             self.updateSelectedChannelView()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.02, execute: { [weak self] in
-                self?.play(channel: channel)
-            })
+            self.playChannel()
         }
     }
 }
@@ -247,19 +295,5 @@ extension RootViewController {
         self.dismissClock()
         self.dismissChannelConfirm()
         self.enableGestures()
-    }
-}
-
-//MARK: - ClockDelegate protocol
-extension RootViewController: ClockDelegate {
-    func updateClockText(displayString: String) {
-        self.clockView.clockLabel.text = displayString
-        if (self.clockView.isHidden) {
-            self.clockView.isHidden = false
-            self.clockView.alpha = 0
-            UIView.animate(withDuration: 0.2) {
-                self.clockView.alpha = 1
-            }
-        }
     }
 }

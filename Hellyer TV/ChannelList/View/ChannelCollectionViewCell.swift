@@ -7,7 +7,6 @@
 //
 
 import TVUIKit
-import Hellfire
 
 class ChannelCollectionViewCell: UICollectionViewCell {
     

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1240"
+   LastUpgradeVersion = "1500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7936F8EE26122CAD2A8D9382CACCE1F9"
-               BuildableName = "Pods_Hellyer_TV.framework"
+               BuildableName = "libPods-Hellyer TV.a"
                BlueprintName = "Pods-Hellyer TV"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

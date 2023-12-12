@@ -8,7 +8,6 @@
 
 import Foundation
 import TVUIKit
-import Hellfire
 
 class ClockView: UIView {
     
@@ -19,12 +18,12 @@ class ClockView: UIView {
     }
     
     override init(frame: CGRect) {
-        super .init(frame: frame)
+        super.init(frame: frame)
         self.commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super .init(coder: aDecoder)
+        super.init(coder: aDecoder)
         self.commonInit()
     }
 
@@ -35,9 +34,12 @@ class ClockView: UIView {
     
     //MARK: - Private API
     
+    private var clockModel: Clock!
     private var gradientLayer: CAGradientLayer?
+
     
     private func commonInit() {
+        self.clockModel = Clock(delegate: self)
         self.configureWithNib(String(describing: type(of: self)))
     }
     
@@ -72,6 +74,14 @@ class ClockView: UIView {
     
     //MARK: - IBOutlets
     
-    @IBOutlet weak var clockLabel: UILabel!
-    @IBOutlet weak var gradientView: UIView!
+    @IBOutlet private weak var clockLabel: UILabel!
+    @IBOutlet private weak var gradientView: UIView!
+}
+
+//MARK: - ClockDelegate protocol
+extension ClockView: ClockModelDelegate {
+    func updateClockText(displayString: String) {
+        guard let _clockLabel = self.clockLabel else { return }
+        _clockLabel.text = displayString
+    }
 }

@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-protocol StoryboardInitializer: class { }
+protocol StoryboardInitializer: AnyObject { }
 
 extension StoryboardInitializer where Self: UIViewController {
 
-    //Throws an exception if the storyboard or identifer are invalid or there is something incorrectly wired up in the storyboard itself
+    //Throws an exception if the storyboard or identifier are invalid or there is something incorrectly wired up in the storyboard itself
     static func newInstance(storyboardName: String, identifier: String? = nil) -> Self {
         if (identifier ?? "").isEmpty {
             return UIStoryboard(name: storyboardName, bundle: nil).instantiateInitialViewController() as! Self

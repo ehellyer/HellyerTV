@@ -7,161 +7,209 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0D027BE6-E23D-4BCA-A074-6C5474946CD6"
+            uuid = "4D60F9F5-FDEC-4B98-9F0E-5447D7CEDCA3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Hellyer TV/TunerScanner/Controller/Tuner.swift"
+            filePath = "Hellyer TV/Common/TunerScanner/Controller/TunerScanner.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "discoveredDevicesWasUpdated()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1A8FC959-A9F2-42C6-AF64-4FF8C8C43C29"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hellyer TV/TunerScanner/Controller/Tuner.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "scanNetworkForTuners(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0641CE6A-02EB-4554-B206-D87FE22036A6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hellyer TV/TunerScanner/Controller/Tuner.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "scanNetworkForTuners(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7E94C1FA-7AAD-44C6-8E45-EA63CB4F56CF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hellyer TV/TunerScanner/Controller/Tuner.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "scanNetworkForTuners(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FD0454DF-BE4F-4528-A19D-8FC580520149"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hellyer TV/TunerScanner/Controller/Tuner.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "scanNetworkForTuners(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C46A7555-6167-428A-9209-B8140490BCD9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hellyer TV/TunerScanner/Controller/UPNPClientController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "removeUPnPObserver()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "889D3707-F312-4E8C-AA96-4470F1AA00BF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hellyer TV/TunerScanner/Controller/UPNPClientController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "rootDevices"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C4E6A7F9-D53A-4803-9E34-7DB2EC0D1020"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hellyer TV/Common/TunerScanner/Controller/Tuner.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "discoveredDevicesWasUpdated()"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "interrogateChannels(inMediaDevice:withTunerId:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C4E6A7F9-D53A-4803-9E34-7DB2EC0D1020 - 6193466c204a9e91"
+                  uuid = "4D60F9F5-FDEC-4B98-9F0E-5447D7CEDCA3 - 66f3438ca6c89097"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Hellyer_TV.Tuner.discoveredDevicesWasUpdated() -&gt; ()"
+                  symbolName = "Hellyer_TV.TunerScanner.interrogateChannels(inMediaDevice: SwiftUPnP.UPnPDevice, withTunerId: Swift.String) -&gt; Swift.Array&lt;Hellyer_TV.Channel&gt;"
                   moduleName = "Hellyer TV"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edhellyer/Google%20Drive/Private/MobileProjects/iOSProjects/ProjectsForHMI/Hellyer%20TV/Hellyer%20TV/Common/TunerScanner/Controller/Tuner.swift"
+                  urlString = "file:///Users/edhellyer/Library/Mobile%20Documents/com~apple~CloudDocs/MobileProjects/ProjectsForHMI/HellyerTV/Hellyer%20TV/Common/TunerScanner/Controller/TunerScanner.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "152"
-                  endingLineNumber = "152"
-                  offsetFromSymbolStart = "181">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "217">
                </Location>
                <Location
-                  uuid = "C4E6A7F9-D53A-4803-9E34-7DB2EC0D1020 - 80c8160fff34c034"
+                  uuid = "4D60F9F5-FDEC-4B98-9F0E-5447D7CEDCA3 - 66f3438ca6c89097"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.BasicUPnPDevice) -&gt; Swift.Bool in closure #1 () -&gt; () in Hellyer_TV.Tuner.discoveredDevicesWasUpdated() -&gt; ()"
+                  symbolName = "Hellyer_TV.TunerScanner.interrogateChannels(inMediaDevice: SwiftUPnP.UPnPDevice, withTunerId: Swift.String) -&gt; Swift.Array&lt;Hellyer_TV.Channel&gt;"
                   moduleName = "Hellyer TV"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edhellyer/Google%20Drive/Private/MobileProjects/iOSProjects/ProjectsForHMI/Hellyer%20TV/Hellyer%20TV/Common/TunerScanner/Controller/Tuner.swift"
+                  urlString = "file:///Users/edhellyer/Library/Mobile%20Documents/com~apple~CloudDocs/MobileProjects/ProjectsForHMI/HellyerTV/Hellyer%20TV/Common/TunerScanner/Controller/TunerScanner.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "152"
-                  endingLineNumber = "152"
-                  offsetFromSymbolStart = "39">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "220">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88F380A6-1773-452A-9389-6C87F922B92E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV Profile/ConnectionManager1Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "getCurrentConnectionInfo(connectionID:log:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "88F380A6-1773-452A-9389-6C87F922B92E - 7c201de8377a183e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SwiftUPnP.ConnectionManager1Service.getCurrentConnectionInfo(connectionID: Swift.Int32, log: SwiftUPnP.UPnPService.MessageLog) async throws -&gt; SwiftUPnP.ConnectionManager1Service.GetCurrentConnectionInfoResponse"
+                  moduleName = "Hellyer TV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edhellyer/Library/Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV%20Profile/ConnectionManager1Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "775">
+               </Location>
+               <Location
+                  uuid = "88F380A6-1773-452A-9389-6C87F922B92E - 7c201de8377a183e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SwiftUPnP.ConnectionManager1Service.getCurrentConnectionInfo(connectionID: Swift.Int32, log: SwiftUPnP.UPnPService.MessageLog) async throws -&gt; SwiftUPnP.ConnectionManager1Service.GetCurrentConnectionInfoResponse"
+                  moduleName = "Hellyer TV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edhellyer/Library/Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV%20Profile/ConnectionManager1Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "512">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C37914D-9218-490B-9D96-271632884A73"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV Profile/ConnectionManager1Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "getCurrentConnectionInfo(connectionID:log:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9C37914D-9218-490B-9D96-271632884A73 - 7c201de8377a181f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SwiftUPnP.ConnectionManager1Service.getCurrentConnectionInfo(connectionID: Swift.Int32, log: SwiftUPnP.UPnPService.MessageLog) async throws -&gt; SwiftUPnP.ConnectionManager1Service.GetCurrentConnectionInfoResponse"
+                  moduleName = "Hellyer TV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edhellyer/Library/Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV%20Profile/ConnectionManager1Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "422">
+               </Location>
+               <Location
+                  uuid = "9C37914D-9218-490B-9D96-271632884A73 - 7c201de8377a181f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SwiftUPnP.ConnectionManager1Service.getCurrentConnectionInfo(connectionID: Swift.Int32, log: SwiftUPnP.UPnPService.MessageLog) async throws -&gt; SwiftUPnP.ConnectionManager1Service.GetCurrentConnectionInfoResponse"
+                  moduleName = "Hellyer TV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edhellyer/Library/Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV%20Profile/ConnectionManager1Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "244">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F44A50DC-9726-48D7-84E1-0416BEB9F8B0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV Profile/ConnectionManager1Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "getCurrentConnectionIDs(log:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F44A50DC-9726-48D7-84E1-0416BEB9F8B0 - 915f50e8c86a91d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SwiftUPnP.ConnectionManager1Service.getCurrentConnectionIDs(log: SwiftUPnP.UPnPService.MessageLog) async throws -&gt; SwiftUPnP.ConnectionManager1Service.GetCurrentConnectionIDsResponse"
+                  moduleName = "Hellyer TV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edhellyer/Library/Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV%20Profile/ConnectionManager1Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "223">
+               </Location>
+               <Location
+                  uuid = "F44A50DC-9726-48D7-84E1-0416BEB9F8B0 - 915f50e8c86a91d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SwiftUPnP.ConnectionManager1Service.getCurrentConnectionIDs(log: SwiftUPnP.UPnPService.MessageLog) async throws -&gt; SwiftUPnP.ConnectionManager1Service.GetCurrentConnectionIDsResponse"
+                  moduleName = "Hellyer TV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edhellyer/Library/Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV%20Profile/ConnectionManager1Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71C3FA41-CAE4-41FC-8B81-D20A782A11B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../Developer/Xcode/DerivedData/Hellyer_TV-fkegguabknzziodfdwqtqzoxydqe/SourcePackages/checkouts/SwiftUPnP/Source/Profiles/AV Profile/ContentDirectory1Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

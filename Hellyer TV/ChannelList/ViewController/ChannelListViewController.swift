@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Hellfire
 
 class ChannelListViewController: UIViewController, StoryboardInitializer {
 
@@ -34,7 +33,6 @@ class ChannelListViewController: UIViewController, StoryboardInitializer {
     //MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var widthConstraint: NSLayoutConstraint!
-    private var rightEdgeConstraint: NSLayoutConstraint!
     
     //MARK: - IBActions
     @objc func swipeRight(sender:UISwipeGestureRecognizer) {
@@ -42,15 +40,11 @@ class ChannelListViewController: UIViewController, StoryboardInitializer {
     }
     
     //MARK: - Private API
+    private var rightEdgeConstraint: NSLayoutConstraint!
     private var timer: Timer?
-    private var channelList = MasterControlProgram.shared.tuner.channels
-
-    private var selectedChannel: Channel? {
+    private var channelList: [Channel] {
         get {
-            return self.channelList.selectedChannel
-        }
-        set {
-            self.channelList.selectedChannel = newValue
+            TunerServer.channelLineUp ?? []
         }
     }
     
@@ -69,27 +63,22 @@ class ChannelListViewController: UIViewController, StoryboardInitializer {
     //MARK: - Public API
     
     static func present<T: UIViewController>(fromParentViewController parent: T) {
-        guard let parentView = parent.view, parentView.viewWithTag(AppConstants.channelListView) == nil else {
+        guard let parentView = parent.view,
+              parent.view?.viewWithTag(AppConstants.channelListView) == nil else {
             return
         }
         
         let viewController = ChannelListViewController.newInstance(storyboardName: "ChannelList")
-        
-        parent.addChild(viewController)
-        
-        guard let childView = viewController.view else {
-            viewController.removeFromParent()
-            return
-        }
-
-        childView.translatesAutoresizingMaskIntoConstraints = false
-        parentView.addSubview(childView)
-        parentView.addConstraint(NSLayoutConstraint(item: parentView, attribute: .top, relatedBy: .equal, toItem: childView, attribute: .top, multiplier: 1, constant: 0))
-        parentView.addConstraint(NSLayoutConstraint(item: parentView, attribute: .bottom, relatedBy: .equal, toItem: childView, attribute: .bottom, multiplier: 1, constant: 0))
-        viewController.rightEdgeConstraint = NSLayoutConstraint(item: parentView, attribute: .right, relatedBy: .equal, toItem: childView, attribute: .left, multiplier: 1, constant: 0)
-        parentView.addConstraint(viewController.rightEdgeConstraint)
+        guard let childView = viewController.view else { return }
         childView.tag = AppConstants.channelListView
-        
+        childView.translatesAutoresizingMaskIntoConstraints = false
+
+        parent.addChild(viewController)
+        parentView.addSubview(childView)
+        parentView.topAnchor.constraint(equalTo: childView.topAnchor, constant: 0).isActive = true
+        childView.bottomAnchor.constraint(equalTo: parentView.bottomAnchor, constant: 0).isActive = true
+        viewController.rightEdgeConstraint = parentView.rightAnchor.constraint(equalTo: childView.leftAnchor, constant: 0)
+        viewController.rightEdgeConstraint.isActive = true
         viewController.didMove(toParent: parent)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
@@ -103,9 +92,16 @@ class ChannelListViewController: UIViewController, StoryboardInitializer {
         self.view.superview?.layoutIfNeeded()
         self.rightEdgeConstraint.constant = self.widthConstraint.constant
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if let index = self.channelList.firstIndex(where: { $0 == TunerServer.selectedChannel }) {
+                let indexPath = IndexPath(item: index, section: 0)
+                self.collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .centeredVertically)
+            }
+        }
+        
         UIView.animate(withDuration: 0.2) {
             self.view.superview?.layoutIfNeeded()
-            self.view.backgroundColor = UIColor.init(hex: 0x1d1f22).withAlphaComponent(AppConstants.bgAlphaComponent)
+            self.view.backgroundColor = UIColor(hex: 0x1d1f22).withAlphaComponent(AppConstants.bgAlphaComponent)
         }
     }
     
@@ -132,20 +128,22 @@ extension ChannelListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.channelList.channels.count
+        return self.channelList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChannelCellIdentifier", for: indexPath) as! ChannelCollectionViewCell
-        let channel = self.channelList.channels[indexPath.row]
-
-        if let logoFileName = ChannelLogoMap.channelLogo[channel.channelName], let logoName = logoFileName {
+        let channel = self.channelList[indexPath.row]
+        
+        if let logoFileName = ChannelLogoMap.channelLogo[channel.guideName],
+           let logoName = logoFileName {
             cell.channelView.channelLogoImage = UIImage(named: logoName)
         } else {
             cell.channelView.channelLogoImage = nil
         }
-        cell.channelView.channelNumber.text = channel.channelNumber
-        cell.channelView.channelName.text = channel.channelName
+        
+        cell.channelView.channelNumber.text = channel.guideNumber
+        cell.channelView.channelName.text = channel.guideName
         return cell
     }
 }
@@ -153,22 +151,26 @@ extension ChannelListViewController: UICollectionViewDataSource {
 extension ChannelListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let channel = self.channelList.channels[indexPath.row]
+        let channel = self.channelList[indexPath.row]
         let notificationInfo = ["channel": channel]
-        NotificationCenter.default.post(name: AppNotificationKeys.channelWasSelected, object: nil, userInfo: notificationInfo)
+        NotificationCenter.default.post(name: AppNotificationKeys.channelWasSelected, 
+                                        object: nil,
+                                        userInfo: notificationInfo)
         self.resetAutoDismissTimer()
     }
     
-    func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+    func collectionView(_ collectionView: UICollectionView, 
+                        didUpdateFocusIn context: UICollectionViewFocusUpdateContext,
+                        with coordinator: UIFocusAnimationCoordinator) {
         self.resetAutoDismissTimer()
     }
     
     func indexPathForPreferredFocusedView(in collectionView: UICollectionView) -> IndexPath? {
-        if let channel = self.selectedChannel, let index = self.channelList.channels.firstIndex(where: { (chan) -> Bool in
-            return chan.fullName == channel.fullName
-        }) {
+        if let index = self.channelList.firstIndex(where: { $0 == TunerServer.selectedChannel}) {
             let indexPath = IndexPath(row: index, section: 0)
-            self.collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .centeredVertically)
+            self.collectionView.selectItem(at: indexPath, 
+                                           animated: false,
+                                           scrollPosition: .centeredVertically)
             return indexPath
         }
         return nil

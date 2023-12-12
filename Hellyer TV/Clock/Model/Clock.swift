@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import Hellfire
 
-protocol ClockDelegate: class {
+protocol ClockModelDelegate: AnyObject {
     func updateClockText(displayString: String)
 }
 
@@ -22,7 +21,7 @@ class Clock {
         debugPrint("\(String(describing: type(of: self))) has deallocated. - \(#function)")
     }
     
-    init(delegate: ClockDelegate?) {
+    init(delegate: ClockModelDelegate?) {
         self.delegate = delegate
         let posix = Locale(identifier: "en_US_POSIX")
         let timeZone = TimeZone.current
@@ -43,15 +42,14 @@ class Clock {
     private let dateFormatter = DateFormatter()
     private let timeFormatter = DateFormatter()
     private let calendar = Calendar.current
-    private weak var delegate: ClockDelegate?
+    private weak var delegate: ClockModelDelegate?
     
     private func updateDisplayString() {
         let date = Date()
         let dateSuffix = self.daySuffix(date: date)
         let dateStr = self.dateFormatter.string(from: date)
         let timeStr = self.timeFormatter.string(from: date)
-        self.displayString = "\(dateStr)\(dateSuffix)  \(timeStr)"
-        self.delegate?.updateClockText(displayString: self.displayString)
+        self.delegate?.updateClockText(displayString: "\(dateStr)\(dateSuffix)  \(timeStr)")
     }
 
     private func daySuffix(date: Date) -> String {
@@ -63,8 +61,4 @@ class Clock {
         default: return "th"
         }
     }
-    
-    //MARK: Public API
-
-    var displayString: String = ""
 }

@@ -8,7 +8,6 @@
 
 import Foundation
 import TVUIKit
-import Hellfire
 
 @IBDesignable class ChannelView: UIView {
     

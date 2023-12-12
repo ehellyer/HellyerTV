@@ -16,10 +16,7 @@ extension UIImageView {
      */
     open override var intrinsicContentSize: CGSize {
         get {
-            if (self.image != nil) {
-                return super.intrinsicContentSize
-            }
-            return CGSize.zero
+            return (self.image != nil) ? super.intrinsicContentSize : CGSize.zero
         }
     }
 }
