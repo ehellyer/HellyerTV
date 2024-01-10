@@ -436,7 +436,7 @@
 			);
 			mainGroup = 78FB409F21A4F63C00AD12C0;
 			packageReferences = (
-				EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage.git" */,
+				EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage" */,
 			);
 			productRefGroup = 78FB40A921A4F63C00AD12C0 /* Products */;
 			projectDirPath = "";
@@ -745,12 +745,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage.git" */ = {
+		EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ehellyer/HellfireSwiftPackage.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.6;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -758,7 +758,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		EB2029302B197F8A00F4F8DA /* Hellfire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage.git" */;
+			package = EB20292F2B197F8A00F4F8DA /* XCRemoteSwiftPackageReference "HellfireSwiftPackage" */;
 			productName = Hellfire;
 		};
 /* End XCSwiftPackageProductDependency section */

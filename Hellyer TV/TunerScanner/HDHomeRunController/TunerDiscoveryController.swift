@@ -15,11 +15,11 @@ import Hellfire
 class TunerDiscoveryController {
     
     private static var hdHomeRunDiscoveryURL =  URL(string: "https://api.hdhomerun.com/discover")!
-    private static var serviceInterface = ServiceInterface.sharedInstance
+    private static var sessionInterface = SessionInterface.sharedInstance
     
     static func discoverTuners(completion: @escaping (Result<[TunerServer], ServiceError>) -> Void) -> Void {
         let request = NetworkRequest(url: hdHomeRunDiscoveryURL, method: .get)
-        _ = self.serviceInterface.execute(request, completion: { (result: DataResult) in
+        _ = self.sessionInterface.execute(request, completion: { (result: DataResult) in
             switch result {
                 case .failure(let error):
                     completion(.failure(error))
@@ -45,7 +45,7 @@ class TunerDiscoveryController {
             let discoverURL = discoveredTuner.discoverURL
             let request = NetworkRequest(url: discoverURL,
                                          method: .get)
-            _ = TunerDiscoveryController.serviceInterface.execute(request, completion: { (result: DataResult) in
+            _ = TunerDiscoveryController.sessionInterface.execute(request, completion: { (result: DataResult) in
                 switch result {
                     case .failure(let error):
                         completion(.failure(error))
@@ -64,7 +64,7 @@ class TunerDiscoveryController {
 
         let lineupURL = tunerServerDevice.lineupURL
         let request = NetworkRequest(url: lineupURL, method: .get)
-        _ = TunerDiscoveryController.serviceInterface.execute(request, completion: { (result: DataResult) in
+        _ = TunerDiscoveryController.sessionInterface.execute(request, completion: { (result: DataResult) in
             switch result {
                 case .failure(_):
                     break
