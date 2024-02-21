@@ -53,8 +53,8 @@ class TunerDiscoveryController {
                         if let data = response.body, let tuner = (try? TunerServer.initialize(jsonData: data)) {
                             tunerDevices.append(tuner)
                         }
-                }
-                completion(.success(tunerDevices))
+                        completion(.success(tunerDevices))
+                }               
             })
         }
     }

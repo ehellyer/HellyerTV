@@ -96,31 +96,31 @@ class RootViewController: UIViewController {
         }
     }
     
-    private func handleDiscoveredTuners(_ tunerDevices: [TunerServer]) {
-        // Check we do not have a tuner already discovered that is in this list.
-        guard TunerServer.selectedTuner == nil,
-              let currentTuner = TunerServer.selectedTuner,
-              tunerDevices.contains(currentTuner) == false else {
-            // If there is a current server, that is in the list of discovered devices, lets start playing where we left off.
-            self.playChannel()
-            return
-        }
+    private func handleDiscoveredTuners(_ devices: [TunerServer]) {
         
-        // Get the first tuner as the discovered tuner.
-        guard let tunerServer = tunerDevices.first else {
+        // Get the first device as the default tuner.
+        // To Be Developed -> A settings option in the app to allow the user to select other discovered tuners when more than one device is discovered.
+        guard let tunerServer = devices.first else {
             // Not tuners found, abort.
             print("No tuners found")
             return
         }
-        
-        // Go get the channel lineup.
+
+        // Get the channel lineup.
         TunerDiscoveryController.tunerChannelLineUp(tunerServer) { [weak self] result in
             switch result {
                 case .success(let channelLineUp):
+                    let previousKnownTuner = TunerServer.selectedTuner
+                    let lastSelectedChannel = TunerServer.selectedChannel
+
                     TunerServer.selectedTuner = tunerServer
                     TunerServer.channelLineUp = channelLineUp
-                    TunerServer.selectedChannel = channelLineUp.first
+                    
+                    if tunerServer != previousKnownTuner || lastSelectedChannel == nil || channelLineUp.contains(lastSelectedChannel!) == false {
+                        TunerServer.selectedChannel = channelLineUp.first
+                    }
                     self?.playChannel()
+                    
                 case .failure(let failure):
                     print("Error fetching channel lineup for tuner.")
                     print(failure.localizedDescription)
@@ -137,7 +137,9 @@ class RootViewController: UIViewController {
     }
     
     private func playChannel() {
-        guard let selectedChannel = TunerServer.selectedChannel else { return }
+        guard let selectedChannel = TunerServer.selectedChannel else {
+            return
+        }
         
         debugPrint("Changing channel to \(selectedChannel.guideName)")
         let vlcMedia = VLCMedia(url: selectedChannel.url)
