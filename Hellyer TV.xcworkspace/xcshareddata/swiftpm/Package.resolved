@@ -1,14 +1,15 @@
 {
+  "originHash" : "bb721371b334fd38c3b31289e67323b46b863733de8c22f905916b2bea77ba36",
   "pins" : [
     {
       "identity" : "hellfireswiftpackage",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ehellyer/HellfireSwiftPackage.git",
       "state" : {
-        "revision" : "2e9a5a8c888e552dbd37677cf90fd0b13ab170aa",
-        "version" : "2.0.0"
+        "revision" : "dc57ebf1a92d5722cc2b33351482fa0fabe9a970",
+        "version" : "2.0.4"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

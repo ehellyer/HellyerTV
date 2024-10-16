@@ -693,7 +693,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Hellyer TV/SupportingFiles/Hellyer_TV-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 16.0;
+				TVOS_DEPLOYMENT_TARGET = 18.0;
 			};
 			name = Debug;
 		};
@@ -721,7 +721,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Hellyer TV/SupportingFiles/Hellyer_TV-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 16.0;
+				TVOS_DEPLOYMENT_TARGET = 18.0;
 			};
 			name = Release;
 		};
