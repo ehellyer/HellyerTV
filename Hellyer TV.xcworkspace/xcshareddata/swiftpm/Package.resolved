@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ehellyer/HellfireSwiftPackage.git",
       "state" : {
-        "revision" : "dc57ebf1a92d5722cc2b33351482fa0fabe9a970",
-        "version" : "2.0.4"
+        "revision" : "26dfd03350e23b71e281a23cf1f9ca4acaf64863",
+        "version" : "3.0.3"
       }
     }
   ],

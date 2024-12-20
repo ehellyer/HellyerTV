@@ -1,5 +1,5 @@
 //
-//  TunerServer.swift
+//  HDHomeRunTuner.swift
 //  Hellyer TV
 //
 //  Created by Ed Hellyer on 11/30/23.
@@ -9,10 +9,10 @@
 import Foundation
 import Hellfire
 
-/// TunerServer - Returned from the discover call.
+/// HDHomeRunTuner - Returned from the discover call.
 ///
-/// e.g. [http://192.168.78.224/discover.json](http://192.168.78.224/discover.json) -> TunerServer
-struct TunerServer: JSONSerializable, Equatable {
+/// e.g. [http://192.168.78.224/discover.json](http://192.168.78.224/discover.json) -> HDHomeRunTuner
+struct HDHomeRunTuner: JSONSerializable, Equatable {
     
     let friendlyName: String
     let modelNumber: String
@@ -25,7 +25,7 @@ struct TunerServer: JSONSerializable, Equatable {
     let tunerCount: Int
 }
 
-extension TunerServer {
+extension HDHomeRunTuner {
 
     enum CodingKeys: String, CodingKey {
         case friendlyName = "FriendlyName"
@@ -40,18 +40,29 @@ extension TunerServer {
     }
 }
 
-extension TunerServer {
+struct HDHomeRunKeys {
+    struct Tuner {
+        static var hdHomeRunDiscoveryURL = URL(string: "https://api.hdhomerun.com/discover")!
+        static var selectedTuner: String { return "UserDefaults.TunerServer" }
+    }
+    struct Channels {
+        static var channelLineUp: String { return "UserDefaults.Channels" }
+        static var selectedChannel: String { return "UserDefaults.Channel" }
+    }
+}
+
+extension HDHomeRunTuner {
     
     /// Gets or sets the selected tuner server.
-    static var selectedTuner: TunerServer? {
+    static var selectedTuner: HDHomeRunTuner? {
         set {
             if let data = try? newValue?.toJSONData() {
-                UserDefaults.standard.set(data, forKey: "UserDefaults.TunerServer")
+                UserDefaults.standard.set(data, forKey: HDHomeRunKeys.Tuner.selectedTuner)
             }
         }
         get {
-            let data = UserDefaults.standard.data(forKey: "UserDefaults.TunerServer")
-            let tuner = try? TunerServer.initialize(jsonData: data)
+            let data = UserDefaults.standard.data(forKey: HDHomeRunKeys.Tuner.selectedTuner)
+            let tuner = try? HDHomeRunTuner.initialize(jsonData: data)
             return tuner
         }
     }
@@ -60,25 +71,25 @@ extension TunerServer {
     static var channelLineUp: [Channel]? {
         set {
             if let data = try? newValue?.toJSONData() {
-                UserDefaults.standard.set(data, forKey: "UserDefaults.Channels")
+                UserDefaults.standard.set(data, forKey: HDHomeRunKeys.Channels.channelLineUp)
             }
         }
         get {
-            let data = UserDefaults.standard.data(forKey: "UserDefaults.Channels")
+            let data = UserDefaults.standard.data(forKey: HDHomeRunKeys.Channels.channelLineUp)
             let channels = try? [Channel].initialize(jsonData: data)
             return channels
         }
     }
-    
+
     /// Gets or sets the selected channel.
     static var selectedChannel: Channel? {
         set {
             if let data = try? newValue?.toJSONData() {
-                UserDefaults.standard.set(data, forKey: "UserDefaults.Channel")
+                UserDefaults.standard.set(data, forKey: HDHomeRunKeys.Channels.selectedChannel)
             }
         }
         get {
-            let data = UserDefaults.standard.data(forKey: "UserDefaults.Channel")
+            let data = UserDefaults.standard.data(forKey: HDHomeRunKeys.Channels.selectedChannel)
             let channel = try? Channel.initialize(jsonData: data)
             return channel
         }

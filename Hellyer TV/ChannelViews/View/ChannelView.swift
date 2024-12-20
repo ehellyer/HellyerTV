@@ -38,7 +38,7 @@ import TVUIKit
     @IBOutlet weak var channelName: UILabel!
     @IBOutlet weak var channelNumber: UILabel!
     
-    //MARk: - Public API
+    //MARK: - Internal API
     var channelLogoImage: UIImage? {
         didSet {
             self.channelLogo.image = self.channelLogoImage

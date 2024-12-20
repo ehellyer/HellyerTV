@@ -17,7 +17,7 @@ extension UIView {
         UIView.configureChildView(childView: view, inParentView: self, withInset: UIEdgeInsets.zero)
     }
     
-    //MARK: - Public API
+    //MARK: - Internal API
     
     func configureWithNib(_ name: String) {
         let bundle = Bundle(for: type(of: self))

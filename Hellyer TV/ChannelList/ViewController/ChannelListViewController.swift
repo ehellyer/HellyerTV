@@ -31,20 +31,23 @@ class ChannelListViewController: UIViewController, StoryboardInitializer {
     }
  
     //MARK: - IBOutlets
+    
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var widthConstraint: NSLayoutConstraint!
     
     //MARK: - IBActions
+    
     @objc func swipeRight(sender:UISwipeGestureRecognizer) {
         self.dismiss()
     }
     
     //MARK: - Private API
+    
     private var rightEdgeConstraint: NSLayoutConstraint!
     private var timer: Timer?
     private var channelList: [Channel] {
         get {
-            TunerServer.channelLineUp ?? []
+            HDHomeRunTuner.channelLineUp ?? []
         }
     }
     
@@ -60,7 +63,7 @@ class ChannelListViewController: UIViewController, StoryboardInitializer {
         }
     }
     
-    //MARK: - Public API
+    //MARK: - Internal API
     
     static func present<T: UIViewController>(fromParentViewController parent: T) {
         guard let parentView = parent.view,
@@ -93,7 +96,7 @@ class ChannelListViewController: UIViewController, StoryboardInitializer {
         self.rightEdgeConstraint.constant = self.widthConstraint.constant
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            if let index = self.channelList.firstIndex(where: { $0 == TunerServer.selectedChannel }) {
+            if let index = self.channelList.firstIndex(where: { $0 == HDHomeRunTuner.selectedChannel }) {
                 let indexPath = IndexPath(item: index, section: 0)
                 self.collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .centeredVertically)
             }
@@ -166,7 +169,7 @@ extension ChannelListViewController: UICollectionViewDelegate {
     }
     
     func indexPathForPreferredFocusedView(in collectionView: UICollectionView) -> IndexPath? {
-        if let index = self.channelList.firstIndex(where: { $0 == TunerServer.selectedChannel}) {
+        if let index = self.channelList.firstIndex(where: { $0 == HDHomeRunTuner.selectedChannel}) {
             let indexPath = IndexPath(row: index, section: 0)
             self.collectionView.selectItem(at: indexPath, 
                                            animated: false,

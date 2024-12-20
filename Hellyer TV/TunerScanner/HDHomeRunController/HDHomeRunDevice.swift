@@ -1,5 +1,5 @@
 //
-//  DiscoveredTunerServer.swift
+//  HDHomeRunDevice.swift
 //  Hellyer TV
 //
 //  Created by Ed Hellyer on 11/30/23.
@@ -9,10 +9,10 @@
 import Foundation
 import Hellfire
 
-/// DiscoveredTunerServer - Local network scan for and HDHomeRun tuner servers.  Returned as an array of `DiscoveredTunerServer`.
+/// HDHomeRunDevice - Local network scan for and HDHomeRun tuner servers.  Returned as an array of `HDHomeRunDevice`.
 ///
-/// e.g. [https://api.hdhomerun.com/discover](https://api.hdhomerun.com/discover) -> [DiscoveredTunerServer]
-struct DiscoveredTunerServer: JSONSerializable, Equatable  {
+/// e.g. [https://api.hdhomerun.com/discover](https://api.hdhomerun.com/discover) -> [HDHomeRunDevice]
+struct HDHomeRunDevice: JSONSerializable, Equatable  {
     
     var deviceId: String
     var localIP: String
@@ -21,7 +21,7 @@ struct DiscoveredTunerServer: JSONSerializable, Equatable  {
     var lineupURL: URL
 }
 
-extension DiscoveredTunerServer {
+extension HDHomeRunDevice {
     
     enum CodingKeys: String, CodingKey {
         case deviceId = "DeviceID"

@@ -35,6 +35,7 @@ class RootViewController: UIViewController {
     }
     
     //MARK: - UI Interaction handlers
+    
     @objc func stopPlayer() {
         if self.mediaPlayer.isPlaying {
             self.mediaPlayer.stop()
@@ -74,11 +75,13 @@ class RootViewController: UIViewController {
     }
     
     //MARK: - IBOutlets
+    
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var clockView: ClockView!
     @IBOutlet weak var selectedChannelView: SelectedChannelView!
     
     //MARK: - Private API
+    
     private var autoDismissTimer: Timer?
     private var clock: Clock?
     private var mediaPlayer = VLCMediaPlayer.shared
@@ -86,7 +89,7 @@ class RootViewController: UIViewController {
     private var isGestureRecognitionEnabled = true
     
     private func initializeTuners() {
-        TunerDiscoveryController.discoverTuners { [weak self] result in
+        HDHomeRunTunerDiscoveryController.discoverTuners { [weak self] result in
             switch result {
                 case .success(let tunerDevices):
                     self?.handleDiscoveredTuners(tunerDevices)
@@ -96,7 +99,7 @@ class RootViewController: UIViewController {
         }
     }
     
-    private func handleDiscoveredTuners(_ devices: [TunerServer]) {
+    private func handleDiscoveredTuners(_ devices: [HDHomeRunTuner]) {
         
         // Get the first device as the default tuner.
         // To Be Developed -> A settings option in the app to allow the user to select other discovered tuners when more than one device is discovered.
@@ -107,17 +110,17 @@ class RootViewController: UIViewController {
         }
 
         // Get the channel lineup.
-        TunerDiscoveryController.tunerChannelLineUp(tunerServer) { [weak self] result in
+        HDHomeRunTunerDiscoveryController.tunerChannelLineUp(tunerServer) { [weak self] result in
             switch result {
                 case .success(let channelLineUp):
-                    let previousKnownTuner = TunerServer.selectedTuner
-                    let lastSelectedChannel = TunerServer.selectedChannel
+                    let previousKnownTuner = HDHomeRunTuner.selectedTuner
+                    let lastSelectedChannel = HDHomeRunTuner.selectedChannel
 
-                    TunerServer.selectedTuner = tunerServer
-                    TunerServer.channelLineUp = channelLineUp
+                    HDHomeRunTuner.selectedTuner = tunerServer
+                    HDHomeRunTuner.channelLineUp = channelLineUp
                     
                     if tunerServer != previousKnownTuner || lastSelectedChannel == nil || channelLineUp.contains(lastSelectedChannel!) == false {
-                        TunerServer.selectedChannel = channelLineUp.first
+                        HDHomeRunTuner.selectedChannel = channelLineUp.first
                     }
                     self?.playChannel()
                     
@@ -137,7 +140,7 @@ class RootViewController: UIViewController {
     }
     
     private func playChannel() {
-        guard let selectedChannel = TunerServer.selectedChannel else {
+        guard let selectedChannel = HDHomeRunTuner.selectedChannel else {
             return
         }
         
@@ -227,7 +230,7 @@ class RootViewController: UIViewController {
     }
     
     private func showChannelConfirm() {
-        if (self.selectedChannelView.isHidden == false || TunerServer.selectedChannel == nil) { return }
+        if (self.selectedChannelView.isHidden == false || HDHomeRunTuner.selectedChannel == nil) { return }
         
         if (self.selectedChannelView.isHidden) {
             self.updateSelectedChannelView()
@@ -249,10 +252,10 @@ class RootViewController: UIViewController {
     }
     
     private func updateSelectedChannelView() {
-        let imageName = (ChannelLogoMap.channelLogo[TunerServer.selectedChannel?.guideName ?? ""] ?? "") ?? ""
+        let imageName = (ChannelLogoMap.channelLogo[HDHomeRunTuner.selectedChannel?.guideName ?? ""] ?? "") ?? ""
         self.selectedChannelView.channelView.channelLogoImage = UIImage(named: imageName)
-        self.selectedChannelView.channelView.channelName.text = TunerServer.selectedChannel?.guideName
-        self.selectedChannelView.channelView.channelNumber.text = TunerServer.selectedChannel?.guideNumber
+        self.selectedChannelView.channelView.channelName.text = HDHomeRunTuner.selectedChannel?.guideName
+        self.selectedChannelView.channelView.channelNumber.text = HDHomeRunTuner.selectedChannel?.guideNumber
     }
     
     private func setAutoDismiss() {
@@ -265,6 +268,7 @@ class RootViewController: UIViewController {
 }
 
 //MARK: - UIGestureRecognizerDelegate protocol
+
 extension RootViewController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return self.isGestureRecognitionEnabled
@@ -272,6 +276,7 @@ extension RootViewController: UIGestureRecognizerDelegate {
 }
 
 //MARK: - VLCMediaPlayerDelegate protocol
+
 extension RootViewController: VLCMediaPlayerDelegate {
     func mediaPlayerStateChanged(_ aNotification: Notification) { }
     func mediaPlayerTimeChanged(_ aNotification: Notification) { }
@@ -281,19 +286,17 @@ extension RootViewController: VLCMediaPlayerDelegate {
 }
 
 //MARK: - ChannelListViewController selected channel observer functions
+
 extension RootViewController {
     private func didSelect(channel: Channel) {
-        if (channel != TunerServer.selectedChannel) {
-            TunerServer.selectedChannel = channel
+        if (channel != HDHomeRunTuner.selectedChannel) {
+            HDHomeRunTuner.selectedChannel = channel
             self.updateSelectedChannelView()
             self.playChannel()
         }
     }
-}
 
-//MARK: - MenuStripDelegate protocol
-extension RootViewController {
-    func channelListDidDismiss() {
+    private func channelListDidDismiss() {
         self.dismissClock()
         self.dismissChannelConfirm()
         self.enableGestures()

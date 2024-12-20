@@ -28,7 +28,7 @@ class SettingsViewController: UIViewController, StoryboardInitializer {
     //MARK: - IBActions
 
     @IBAction func updateChannels_TouchUp(_ sender: UIButton) {
-        TunerDiscoveryController.discoverTuners { result in
+        HDHomeRunTunerDiscoveryController.discoverTuners { result in
             switch result {
                 case .success(let tunerDevices):
                     self.tunerDevices = tunerDevices
@@ -45,14 +45,14 @@ class SettingsViewController: UIViewController, StoryboardInitializer {
     }
     
     //MARK: - Private API
-    private var tunerDevices: [TunerServer] = []
+    private var tunerDevices: [HDHomeRunTuner] = []
     
     private func dismiss() {
         NotificationCenter.default.post(name: AppNotificationKeys.channelListDidDismiss, object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
-    //MARK: - Public API
+    //MARK: - Internal API
 
     static func present<T: UIViewController>(fromParentViewController parent: T) {
         guard let parentView = parent.view, parentView.viewWithTag(AppConstants.settingsView) == nil else {
@@ -90,11 +90,11 @@ extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let tuner = self.tunerDevices[indexPath.row]
-        TunerServer.selectedTuner = tuner
-        TunerDiscoveryController.tunerChannelLineUp(tuner) { (result) in
+        HDHomeRunTuner.selectedTuner = tuner
+        HDHomeRunTunerDiscoveryController.tunerChannelLineUp(tuner) { (result) in
             switch result {
                 case .success(let channelLineUp):
-                    TunerServer.channelLineUp = channelLineUp
+                    HDHomeRunTuner.channelLineUp = channelLineUp
                 case .failure(let failure):
                     print(failure)
             }

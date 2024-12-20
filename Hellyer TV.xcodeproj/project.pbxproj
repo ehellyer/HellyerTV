@@ -33,11 +33,11 @@
 		78FB437421AE445D00AD12C0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FB436A21AE3CC300AD12C0 /* AudioToolbox.framework */; };
 		78FB437521AE446300AD12C0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FB436821AE3CBC00AD12C0 /* AVFoundation.framework */; };
 		EB2029312B197F8A00F4F8DA /* Hellfire in Frameworks */ = {isa = PBXBuildFile; productRef = EB2029302B197F8A00F4F8DA /* Hellfire */; };
-		EB2029352B19815E00F4F8DA /* TunerServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2029342B19815E00F4F8DA /* TunerServer.swift */; };
+		EB2029352B19815E00F4F8DA /* HDHomeRunTuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2029342B19815E00F4F8DA /* HDHomeRunTuner.swift */; };
 		EB2029372B19828300F4F8DA /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2029362B19828300F4F8DA /* Channel.swift */; };
-		EB20293C2B1988FC00F4F8DA /* TunerDiscoveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20293B2B1988FC00F4F8DA /* TunerDiscoveryController.swift */; };
+		EB20293C2B1988FC00F4F8DA /* HDHomeRunTunerDiscoveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20293B2B1988FC00F4F8DA /* HDHomeRunTunerDiscoveryController.swift */; };
 		EB4DCF6F235C89D000525700 /* AppNotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4DCF6E235C89D000525700 /* AppNotificationKeys.swift */; };
-		EB73428D250530730058E745 /* DiscoveredTunerServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73428C250530730058E745 /* DiscoveredTunerServer.swift */; };
+		EB73428D250530730058E745 /* HDHomeRunDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73428C250530730058E745 /* HDHomeRunDevice.swift */; };
 		EB7342AE2512DEE10058E745 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7342AD2512DEE10058E745 /* String+Extension.swift */; };
 		EBB734DD2358989D00BA57D4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB734DC2358989D00BA57D4 /* SettingsViewController.swift */; };
 		EBB734DF2358993700BA57D4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB734DE2358993700BA57D4 /* Settings.storyboard */; };
@@ -90,15 +90,15 @@
 		78FB437021AE3D4600AD12C0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		78FB437221AE3D5F00AD12C0 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		DCB971BF528040AC51A6DC8C /* Pods-Hellyer TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hellyer TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hellyer TV/Pods-Hellyer TV.release.xcconfig"; sourceTree = "<group>"; };
-		EB2029342B19815E00F4F8DA /* TunerServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerServer.swift; sourceTree = "<group>"; };
+		EB2029342B19815E00F4F8DA /* HDHomeRunTuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDHomeRunTuner.swift; sourceTree = "<group>"; };
 		EB2029362B19828300F4F8DA /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		EB20293B2B1988FC00F4F8DA /* TunerDiscoveryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerDiscoveryController.swift; sourceTree = "<group>"; };
+		EB20293B2B1988FC00F4F8DA /* HDHomeRunTunerDiscoveryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDHomeRunTunerDiscoveryController.swift; sourceTree = "<group>"; };
 		EB4DCF6E235C89D000525700 /* AppNotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotificationKeys.swift; sourceTree = "<group>"; };
-		EB73428C250530730058E745 /* DiscoveredTunerServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredTunerServer.swift; sourceTree = "<group>"; };
+		EB73428C250530730058E745 /* HDHomeRunDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDHomeRunDevice.swift; sourceTree = "<group>"; };
 		EB7342AD2512DEE10058E745 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		EBAC407A2D0BCE3C00B3F1A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBB734DC2358989D00BA57D4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EBB734DE2358993700BA57D4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		EBEB571C2B1833F5006465B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED3D64C73C927B052E0CE122 /* Pods-Hellyer TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hellyer TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hellyer TV/Pods-Hellyer TV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,9 +174,9 @@
 		78B3DCA521B0C0F900FE3A5A /* HDHomeRunController */ = {
 			isa = PBXGroup;
 			children = (
-				EB20293B2B1988FC00F4F8DA /* TunerDiscoveryController.swift */,
-				EB73428C250530730058E745 /* DiscoveredTunerServer.swift */,
-				EB2029342B19815E00F4F8DA /* TunerServer.swift */,
+				EB20293B2B1988FC00F4F8DA /* HDHomeRunTunerDiscoveryController.swift */,
+				EB73428C250530730058E745 /* HDHomeRunDevice.swift */,
+				EB2029342B19815E00F4F8DA /* HDHomeRunTuner.swift */,
 				EB2029362B19828300F4F8DA /* Channel.swift */,
 			);
 			path = HDHomeRunController;
@@ -408,7 +408,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = "Hellyer Multimedia";
 				TargetAttributes = {
 					78FB40A721A4F63C00AD12C0 = {
@@ -433,6 +433,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 78FB409F21A4F63C00AD12C0;
 			packageReferences = (
@@ -512,7 +513,7 @@
 				78B7637D21D7D257004816DC /* UIColor+Extension.swift in Sources */,
 				78B7637F21D83EBA004816DC /* ChannelLogoMap.swift in Sources */,
 				78B7638E21D983B6004816DC /* SelectedChannelView.swift in Sources */,
-				EB2029352B19815E00F4F8DA /* TunerServer.swift in Sources */,
+				EB2029352B19815E00F4F8DA /* HDHomeRunTuner.swift in Sources */,
 				78B7639421D99F43004816DC /* AppConstants.swift in Sources */,
 				78FB40AE21A4F63C00AD12C0 /* RootViewController.swift in Sources */,
 				78B7639221D99894004816DC /* ChannelView.swift in Sources */,
@@ -528,8 +529,8 @@
 				784B4B7B21C55F3A00CB6DB2 /* UIView+Extension.swift in Sources */,
 				78365FA121D05FF7006CCC1A /* UIImageView+Extension.swift in Sources */,
 				78FB40B121A4F63C00AD12C0 /* Hellyer_TV.xcdatamodeld in Sources */,
-				EB73428D250530730058E745 /* DiscoveredTunerServer.swift in Sources */,
-				EB20293C2B1988FC00F4F8DA /* TunerDiscoveryController.swift in Sources */,
+				EB73428D250530730058E745 /* HDHomeRunDevice.swift in Sources */,
+				EB20293C2B1988FC00F4F8DA /* HDHomeRunTunerDiscoveryController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +540,7 @@
 		78FB40B221A4F63C00AD12C0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EBEB571C2B1833F5006465B6 /* en */,
+				EBAC407A2D0BCE3C00B3F1A3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -683,13 +684,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hellyermultimedia.Hellyer-TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				STRIP_INSTALLED_PRODUCT = NO;
-				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Hellyer TV/SupportingFiles/Hellyer_TV-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -711,13 +710,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hellyermultimedia.Hellyer-TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				STRIP_INSTALLED_PRODUCT = NO;
-				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Hellyer TV/SupportingFiles/Hellyer_TV-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -754,7 +751,7 @@
 			repositoryURL = "https://github.com/ehellyer/HellfireSwiftPackage.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

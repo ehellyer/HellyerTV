@@ -20,11 +20,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		EB9E90D53B65404F9551D92BAB696F08 /* Pods-Hellyer TV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA5F09F486F0AB9D33FAABBDA7F4EE /* Pods-Hellyer TV-dummy.m */; };
+		DC4B779C3C43400C0C70BD5B72BA57C1 /* Pods-Hellyer TV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA5F09F486F0AB9D33FAABBDA7F4EE /* Pods-Hellyer TV-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3AFBD2E4E43A963AA8B602EDAC406C09 /* PBXContainerItemProxy */ = {
+		F9D5F379E671CF0495AAD4C3D6D41A83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -49,7 +49,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F6757B623FD661B44F2352CEE45907AF /* Frameworks */ = {
+		367DE54779133BA791BB8E106EA1059F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -147,7 +147,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		28E18794D82BF748B0772DB2E415F8AB /* Headers */ = {
+		BBCB9F7E4C43E8E319CB27F26E6B6C5F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -159,16 +159,16 @@
 /* Begin PBXNativeTarget section */
 		7936F8EE26122CAD2A8D9382CACCE1F9 /* Pods-Hellyer TV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A43888DFE77C60AD4021780F22AA70C /* Build configuration list for PBXNativeTarget "Pods-Hellyer TV" */;
+			buildConfigurationList = 4E9D4373543EFDD590BFF7C103C1EFD9 /* Build configuration list for PBXNativeTarget "Pods-Hellyer TV" */;
 			buildPhases = (
-				28E18794D82BF748B0772DB2E415F8AB /* Headers */,
-				FB348ADC46E822BABC026B8CD9B2A72B /* Sources */,
-				F6757B623FD661B44F2352CEE45907AF /* Frameworks */,
+				BBCB9F7E4C43E8E319CB27F26E6B6C5F /* Headers */,
+				CBFA2257DFA97440797CBDD367621510 /* Sources */,
+				367DE54779133BA791BB8E106EA1059F /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5CEEBF366A5E49620DE4F5EC33D7A43F /* PBXTargetDependency */,
+				9BC173E92A215E68D3E070D95D61552E /* PBXTargetDependency */,
 			);
 			name = "Pods-Hellyer TV";
 			productName = "Pods-Hellyer TV";
@@ -181,8 +181,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 12.0";
@@ -193,6 +193,8 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 96270B245975F34ECCDC7E5876F01508 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -224,27 +226,49 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FB348ADC46E822BABC026B8CD9B2A72B /* Sources */ = {
+		CBFA2257DFA97440797CBDD367621510 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB9E90D53B65404F9551D92BAB696F08 /* Pods-Hellyer TV-dummy.m in Sources */,
+				DC4B779C3C43400C0C70BD5B72BA57C1 /* Pods-Hellyer TV-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5CEEBF366A5E49620DE4F5EC33D7A43F /* PBXTargetDependency */ = {
+		9BC173E92A215E68D3E070D95D61552E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TVVLCKit;
 			target = 0BAD53B4A3D10AF4C69C36853F976CD6 /* TVVLCKit */;
-			targetProxy = 3AFBD2E4E43A963AA8B602EDAC406C09 /* PBXContainerItemProxy */;
+			targetProxy = F9D5F379E671CF0495AAD4C3D6D41A83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1A5690D2465477D3DC310DC6C30165EB /* Release */ = {
+		7D653D9359ABFCA5AD801798C3B3281B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A59DD3EEFFD49D12BB564BCB9DFD409 /* Pods-Hellyer TV.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 18.0;
+			};
+			name = Debug;
+		};
+		8E8D9526B0D27948F0A85E949542F74E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45B959BC2A484608433D87AB59717AB7 /* Pods-Hellyer TV.release.xcconfig */;
 			buildSettings = {
@@ -252,6 +276,8 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -264,42 +290,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		1ED3E4B04A283CEA011A808E29CDAF19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9407F9F8222286ADC91AE8C4964BD47E /* TVVLCKit.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.2;
-			};
-			name = Debug;
-		};
-		7F3466FC0349B4B81E6CDFE5E797DD41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A59DD3EEFFD49D12BB564BCB9DFD409 /* Pods-Hellyer TV.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 18.0;
-			};
-			name = Debug;
 		};
 		B2BD109678C246C44ACBB9EDFE55FFC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -367,23 +357,6 @@
 			};
 			name = Debug;
 		};
-		C7B497327EA82237513035A07DC58F2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE327874222D7672E6F160BA514B06E5 /* TVVLCKit.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		CF3DB8073BB9CE1946F2B8B4E112FCC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,18 +419,44 @@
 			};
 			name = Release;
 		};
+		D0EF3DA5FFA58DAFACD5FAC1FA62D9EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE327874222D7672E6F160BA514B06E5 /* TVVLCKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9FCCC8AD48F4687B8F4058CD1E924D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9407F9F8222286ADC91AE8C4964BD47E /* TVVLCKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A43888DFE77C60AD4021780F22AA70C /* Build configuration list for PBXNativeTarget "Pods-Hellyer TV" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7F3466FC0349B4B81E6CDFE5E797DD41 /* Debug */,
-				1A5690D2465477D3DC310DC6C30165EB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -467,11 +466,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4E9D4373543EFDD590BFF7C103C1EFD9 /* Build configuration list for PBXNativeTarget "Pods-Hellyer TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D653D9359ABFCA5AD801798C3B3281B /* Debug */,
+				8E8D9526B0D27948F0A85E949542F74E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C519416E3C4B94836DF6EA300DAF0240 /* Build configuration list for PBXAggregateTarget "TVVLCKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1ED3E4B04A283CEA011A808E29CDAF19 /* Debug */,
-				C7B497327EA82237513035A07DC58F2E /* Release */,
+				D9FCCC8AD48F4687B8F4058CD1E924D6 /* Debug */,
+				D0EF3DA5FFA58DAFACD5FAC1FA62D9EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
